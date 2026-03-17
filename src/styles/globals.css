@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -- 全局颜色变量（修改主题只需改这里） -- */
+
+:root {
+  /* 品牌主色 */
+  --ts-primary: #5E9CE6;
+  --ts-primary-hover: #4D8BD4;
+  --ts-primary-active: #3D7AC2;
+  --ts-primary-shadow: rgba(94, 156, 230, 0.35);
+  --ts-primary-shadow-hover: rgba(94, 156, 230, 0.45);
+  --ts-primary-ring: rgba(94, 156, 230, 0.12);
+  --ts-primary-highlight: rgba(94, 156, 230, 0.4);
+
+  /* 背景 */
+  --ts-bg: #fff;
+  --ts-bg-section: #fafafa;
+  --ts-bg-elevated: #f7f8fa;
+  --ts-bg-elevated-hover: #eef1f6;
+  --ts-bg-button: #f5f7fa;
+
+  /* 文字 */
+  --ts-text: #333;
+  --ts-text-on-primary: #fff;
+  --ts-text-secondary: #999;
+  --ts-text-hint: #aaa;
+  --ts-text-muted: #bbb;
+
+  /* 边框 */
+  --ts-border: #eee;
+  --ts-border-sidebar: #e5e5e5;
+  --ts-border-input: #ddd;
+  --ts-border-button: #e0e3e8;
+
+  /* 状态 */
+  --ts-success: #22a06b;
+  --ts-warning: #cf7700;
+  --ts-error: #de350b;
+
+  /* 其他 */
+  --ts-scrollbar: #ccc;
+  --ts-sidebar-shadow: rgba(0, 0, 0, 0.08);
+}
+
+/* -- 容器基础样式重置 -- */
+
+#ts-root,
+#ts-root * {
+  box-sizing: border-box !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'PingFang SC', 'Microsoft YaHei', sans-serif !important;
+}
+
+#ts-root {
+  line-height: 1.5 !important;
+}
+
+/* -- 自定义滚动条 -- */
+
+#ts-root .ts-scrollarea-viewport::-webkit-scrollbar {
+  width: 5px !important;
+}
+
+#ts-root .ts-scrollarea-viewport::-webkit-scrollbar-thumb {
+  background: var(--ts-scrollbar) !important;
+  border-radius: 3px !important;
+}
+
+/* -- 隐私模式 -- */
+
+#ts-root .ts-hidden-content .ts-preview-text {
+  display: none !important;
+}
+
+#ts-root .ts-hidden-content .ts-fill-btn::after {
+  content: ' ***' !important;
+  color: var(--ts-text-muted) !important;
+  font-weight: 400 !important;
+}
+
+/* -- 响应式 -- */
+
+@media print {
+  #ts-root {
+    display: none !important;
+  }
+}
