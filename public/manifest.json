@@ -10,7 +10,7 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"],
+      "js": ["resume-data.js", "content.js"],
       "css": ["styles.css"],
       "run_at": "document_end"
     }

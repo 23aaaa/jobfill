@@ -18,6 +18,11 @@ function copyStaticAssets() {
         resolve(dist, 'background.js'),
       );
 
+      const resumeDataSrc = resolve(__dirname, 'resume-data.js');
+      if (existsSync(resumeDataSrc)) {
+        copyFileSync(resumeDataSrc, resolve(dist, 'resume-data.js'));
+      }
+
       const iconsOut = resolve(dist, 'icons');
       if (!existsSync(iconsOut)) mkdirSync(iconsOut, { recursive: true });
       const iconsSrc = resolve(__dirname, 'icons');

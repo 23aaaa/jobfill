@@ -108,40 +108,13 @@ npm install
 
 **第 2 步 -- 配置你的简历数据**
 
+与方式一相同，编辑根目录的 `resume-data.js`（两种方式共用同一份数据文件）：
+
 ```bash
-cp src/data/resume-data.example.ts src/data/resume-data.local.ts
+cp resume-data.example.js resume-data.js
 ```
 
-编辑 `src/data/resume-data.local.ts`，填入你的真实信息。构建版支持子分组（subGroups），适合有多段教育/实习经历的场景：
-
-```ts
-import type { ResumeGroup } from './resume-data';
-
-export const RESUME_DATA: ResumeGroup[] = [
-  {
-    group: '教育经历',
-    subGroups: [
-      {
-        name: '硕士 - XX大学',
-        items: [
-          { label: '学校', value: 'XX大学' },
-          { label: '专业', value: 'XX专业' },
-          { label: '时间', value: '2023/09-2026/06' },
-        ],
-      },
-      {
-        name: '本科 - YY大学',
-        items: [
-          { label: '学校', value: 'YY大学' },
-          { label: '专业', value: 'YY专业' },
-          { label: '时间', value: '2019/09-2023/06' },
-        ],
-      },
-    ],
-  },
-  // ...更多分组
-];
-```
+构建时会自动将 `resume-data.js` 复制到 `dist/` 目录，并在运行时将扁平数据自动转换为卡片式展示所需的分组结构。
 
 **第 3 步 -- 构建**
 
@@ -186,7 +159,7 @@ npm run dev
 
 ### 更新简历数据
 
-修改数据文件后：
+两种方式共用同一份 `resume-data.js`，修改后：
 - **直接加载版**：在 `chrome://extensions/` 点击扩展卡片的刷新按钮
 - **构建版**：重新运行 `npm run build`，再刷新扩展
 
@@ -226,8 +199,8 @@ jobfill/
 │   │   ├── cards/               # 卡片组件（教育/实习/项目经历）
 │   │   └── ui/                  # 基础 UI 组件（Button / Input / ScrollArea）
 │   ├── data/
-│   │   ├── resume-data.ts       # 数据加载器（自动检测 local > example）
-│   │   └── resume-data.example.ts  # 简历数据模板（构建版）
+│   │   ├── resume-data.ts       # 数据加载器（读取全局 resume-data.js 并自动转换格式）
+│   │   └── resume-data.example.ts  # 简历数据模板（构建版回退用）
 │   ├── hooks/                   # use-form-filler / use-input-scanner / use-search
 │   ├── stores/                  # Zustand 状态管理
 │   ├── utils/                   # DOM 操作 & 填充逻辑
@@ -266,7 +239,7 @@ jobfill/
 
 - 本工具 **完全本地运行**，不请求任何外部服务器
 - 你的简历数据仅保存在本地文件中，不经过网络传输
-- 个人数据文件（`resume-data.js` / `resume-data.local.ts`）已被 `.gitignore` 忽略，不会提交到 Git
+- 个人数据文件（`resume-data.js`）已被 `.gitignore` 忽略，不会提交到 Git
 
 ---
 
