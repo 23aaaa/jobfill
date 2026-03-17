@@ -16,6 +16,7 @@ export function EducationCard({ subGroup, onFill, hideContent }: EducationCardPr
   const degree = findValue(items, '学历');
   const mode = findValue(items, '学制');
   const rank = findValue(items, '成绩排名');
+  const gpa = findValue(items, 'GPA');
   const college = findValue(items, '学院');
   const research = findValue(items, '研究方向');
   const lab = findValue(items, '实验室');
@@ -26,6 +27,7 @@ export function EducationCard({ subGroup, onFill, hideContent }: EducationCardPr
     { label: '学历', value: degree },
     { label: '学制', value: mode },
     { label: '成绩排名', value: rank },
+    { label: 'GPA', value: gpa },
   ].filter((t) => Boolean(t.value));
 
   return (

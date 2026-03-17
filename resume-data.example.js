@@ -21,6 +21,8 @@ var __TS_RESUME_DATA = [
       { label: '身份证', value: '110101200001010000' },
       { label: '现居住地', value: '北京市' },
       { label: '最高学历', value: '硕士研究生' },
+      { label: '紧急联系人', value: 'XX' },
+      { label: '紧急联系人电话', value: '13800138000' },
     ],
   },
   {
@@ -32,6 +34,7 @@ var __TS_RESUME_DATA = [
       { label: '硕士-学历', value: '硕士研究生' },
       { label: '硕士-学制', value: '全日制' },
       { label: '硕士-成绩排名', value: '前XX%' },
+      { label: '硕士-GPA', value: 'X.XX' },
       { label: '硕士-时间', value: '2023/09-2026/06' },
       { label: '本科-学校', value: 'XX大学' },
       { label: '本科-学院', value: 'XX学院' },
@@ -39,6 +42,7 @@ var __TS_RESUME_DATA = [
       { label: '本科-学历', value: '大学本科' },
       { label: '本科-学制', value: '全日制' },
       { label: '本科-成绩排名', value: '前XX%' },
+      { label: '本科-GPA', value: 'X.XX' },
       { label: '本科-时间', value: '2019/09-2023/06' },
     ],
   },
@@ -77,6 +81,12 @@ var __TS_RESUME_DATA = [
       { label: '技能1', value: '熟练' },
       { label: '技能2', value: '精通' },
       { label: '技能3', value: '了解' },
+    ],
+  },
+  {
+    group: '自我评价',
+    items: [
+      { label: '自我评价', value: '在此填写你的自我评价...' },
     ],
   },
 ];

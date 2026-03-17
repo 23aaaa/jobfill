@@ -20,6 +20,8 @@ export const RESUME_DATA: ResumeGroup[] = [
           { label: '身份证', value: '110101200001010000' },
           { label: '现居住地', value: '北京市' },
           { label: '最高学历', value: '硕士研究生' },
+          { label: '紧急联系人', value: 'XX' },
+          { label: '紧急联系人电话', value: '13800138000' },
         ],
       },
     ],
@@ -36,6 +38,7 @@ export const RESUME_DATA: ResumeGroup[] = [
           { label: '学历', value: '硕士研究生' },
           { label: '学制', value: '全日制' },
           { label: '成绩排名', value: '前XX%' },
+          { label: 'GPA', value: 'X.XX' },
           { label: '时间', value: '2023/09-2026/06' },
         ],
       },
@@ -48,6 +51,7 @@ export const RESUME_DATA: ResumeGroup[] = [
           { label: '学历', value: '大学本科' },
           { label: '学制', value: '全日制' },
           { label: '成绩排名', value: '前XX%' },
+          { label: 'GPA', value: 'X.XX' },
           { label: '时间', value: '2019/09-2023/06' },
         ],
       },
@@ -106,6 +110,17 @@ export const RESUME_DATA: ResumeGroup[] = [
           { label: '技能1', value: '熟练' },
           { label: '技能2', value: '精通' },
           { label: '技能3', value: '了解' },
+        ],
+      },
+    ],
+  },
+  {
+    group: '自我评价',
+    subGroups: [
+      {
+        name: '自我评价',
+        items: [
+          { label: '自我评价', value: '在此填写你的自我评价...' },
         ],
       },
     ],
