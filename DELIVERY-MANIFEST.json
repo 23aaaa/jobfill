@@ -1,0 +1,29 @@
+{
+  "product": "小师弟求职",
+  "version": "1.1.0-rc.1",
+  "generated_at": "2026-09-23T09:05:52Z",
+  "source_sha256": "ba1face72fbb93d1ebf462c94cbcbd065ea115f5cbcda7ba0ec7d21ce0c0a7f7",
+  "automatic_tests": {
+    "unit": 127,
+    "browser_regression": 58,
+    "refinement": 32,
+    "passed": 217,
+    "failed": 0
+  },
+  "release_decision": "HOLD",
+  "release_notice": "安装验收候选包，不是已通过真实官网、真人可用性、原生 Windows 或商店审核的正式销售认证。",
+  "artifacts": {
+    "release/xiaoshidi-extension-1.1.0-rc.1.zip": {
+      "bytes": 163444,
+      "sha256": "28459a7e91530eeefc107e67dddd36033ec6b249a468cfb1e0af11462d018e5d"
+    },
+    "release/小师弟求职-资料模板.xlsx": {
+      "bytes": 243943,
+      "sha256": "e60f19984626e2dae1f12c4b90948c499251e3c49b04d9a173d3f700251812f6"
+    },
+    "release/小师弟求职-资料维护.html": {
+      "bytes": 133604,
+      "sha256": "6f480afb93c4c4ea4be25bca1d293e4982da2974d7182235a05c8e4f4267baa7"
+    }
+  }
+}

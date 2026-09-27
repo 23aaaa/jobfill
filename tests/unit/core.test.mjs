@@ -1,0 +1,78 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {deflateRawSync} from 'node:zlib';
+import {VERSION,emptyProfile,makeModule,makeField,makeEntry,validateProfile,clone,stats,uid,moveItem,duplicateEntry,searchable,parseJson,byteLength,LIMITS} from '../../extension/domain/model.js';
+import {starterProfile,fullTemplate,TEMPLATES,exampleProfile} from '../../extension/domain/templates.js';
+import {crc32,packZip,unpackZip} from '../../extension/infra/zip.js';
+import {profileRows,metadataRows,rowsToProfile,exportXlsx,HEADERS} from '../../extension/infra/xlsx.js';
+import {encryptProfile,decryptProfile} from '../../extension/infra/vault.js';
+import {createStore,STORE_KEY} from '../../extension/infra/storage-core.js';
+const example=()=>{const p=emptyProfile(),m=makeModule('我的自定义模块','少用');m.entries[0].title='我的条目';p.modules.push(m);return p;};
+const roundtrip=p=>rowsToProfile(profileRows(p),new Map(metadataRows(p)));
+const driver=()=>{const data=new Map();return {data,async get(k){return clone(data.get(k));},async set(k,v){data.set(k,clone(v));}};};
+
+test('starter contains useful default modules, not the entire catalog',()=>{const p=starterProfile();assert.equal(p.modules.length,8);assert.equal(stats(p).filled,0);assert.ok(TEMPLATES.length>p.modules.length);validateProfile(p);});
+test('complete template validates and includes all 20 progressive modules',()=>{const p=fullTemplate();assert.equal(p.modules.length,20);assert.equal(stats(p).total,230);validateProfile(p);});
+test('example data is explicitly marked fictitious',()=>{const p=exampleProfile();assert.match(p.name,/虚构/);assert.ok(stats(p).filled>20);validateProfile(p);});
+test('dynamic modules, entries, groups and fields survive validation',()=>{const p=example();p.modules[0].entries.push(makeEntry('第二段',[makeField('工作保留时间','用户自定义') ]));assert.deepEqual(validateProfile(p),p);});
+test('leading zeros, exact long numeric IDs, Unicode and whitespace preserved',()=>{const p=example();p.modules[0].entries[0].fields[0].value='  0013800000000\n510000200001010001\r\n• → ① 🚀 café e\u0301\t中文  ';assert.deepEqual(validateProfile(p),p);});
+test('no semantic rewriting, trimming or date guessing',()=>{const p=example();p.modules[0].entries[0].fields[0].value='  2026/9 至今 —  原样  ';assert.equal(validateProfile(p).modules[0].entries[0].fields[0].value,'  2026/9 至今 —  原样  ');});
+test('future schema version rejected without migration guessing',()=>{const p=example();p.version=2;assert.throws(()=>validateProfile(p),/不支持资料版本/);});
+test('duplicate global IDs rejected',()=>{const p=example();p.modules[0].entries[0].fields[0].id=p.id;assert.throws(()=>validateProfile(p),/重复/);});
+test('numeric field values rejected instead of losing precision',()=>{const p=example();p.modules[0].entries[0].fields[0].value=510000200001010001;assert.throws(()=>validateProfile(p),/文本/);});
+test('Excel cell length limit enforced',()=>{const p=example();p.modules[0].entries[0].fields[0].value='a'.repeat(32768);assert.throws(()=>validateProfile(p),/32767/);});
+test('exact maximum field length accepted',()=>{const p=example();p.modules[0].entries[0].fields[0].value='a'.repeat(32767);validateProfile(p);});
+test('invalid control characters rejected',()=>{const p=example();p.modules[0].entries[0].fields[0].value='hello\0world';assert.throws(()=>validateProfile(p),/控制字符/);});
+test('unpaired surrogate rejected before TextEncoder replacement',()=>{const p=example();p.modules[0].entries[0].fields[0].value='\ud800';assert.throws(()=>validateProfile(p),/Unicode/);});
+test('empty module name rejected',()=>{const p=example();p.modules[0].name='  ';assert.throws(()=>validateProfile(p),/不能为空/);});
+test('unknown properties discarded and prototype keys never merged',()=>{const p=example();p.__protoValue='ignore';const parsed=JSON.parse(JSON.stringify(p).replace('"version":1','"__proto__":{"polluted":true},"version":1'));assert.equal(validateProfile(parsed).__protoValue,undefined);assert.equal({}.polluted,undefined);});
+test('malformed JSON fails explicitly',()=>assert.throws(()=>parseJson('{bad'),/JSON/));
+test('profile byte quota enforced',()=>{const p=example();for(let i=0;i<80;i++){const f=makeField('f'+i);f.value='中'.repeat(30000);p.modules[0].entries[0].fields.push(f);}assert.throws(()=>validateProfile(p),/2 MB/);});
+test('module count bounded',()=>{const p=example();p.modules=Array.from({length:61},()=>makeModule());assert.throws(()=>validateProfile(p),/60/);});
+test('move operations preserve identities and reject out-of-range moves',()=>{const a=[{id:'a'},{id:'b'}];assert.equal(moveItem(a,'a',-1),false);assert.equal(moveItem(a,'a',1),true);assert.deepEqual(a.map(x=>x.id),['b','a']);assert.equal(moveItem(a,'x',1),false);});
+test('duplicate entry gets new identity and independent fields',()=>{const e=makeEntry('经历',[makeField('描述')]);e.fields[0].value='kept';const d=duplicateEntry(e);assert.notEqual(d.id,e.id);assert.notEqual(d.fields[0].id,e.fields[0].id);d.fields[0].value='changed';assert.equal(e.fields[0].value,'kept');});
+test('sensitive value not searchable while its label remains searchable',()=>{const f=makeField('证件号码','证件','text',true);f.value='private-secret';assert.equal(searchable(f,{title:'条目'},{name:'基本'},'private-secret'),false);assert.equal(searchable(f,{title:'条目'},{name:'基本'},'证件'),true);});
+test('stats count filled fields without treating optional empties as required',()=>{const p=example();p.modules[0].entries[0].fields[0].value='0';assert.deepEqual(stats(p),{modules:1,entries:1,total:1,filled:1,sensitive:0});});
+
+test('workbook rows round-trip full template exactly',()=>{const p=fullTemplate();assert.deepEqual(roundtrip(p),p);});
+test('workbook rows round-trip arbitrary labels and special text',()=>{const p=example();p.modules[0].entries[0].fields[0].value='=HYPERLINK("https://example.com")\n<x>&\"\'\r\n_x000D_\t𠮷';assert.deepEqual(roundtrip(p),p);});
+test('empty modules and empty entries round-trip',()=>{const p=example();p.modules.push({...makeModule('空模块'),entries:[]});p.modules[0].entries.push(makeEntry('空条目'));assert.deepEqual(roundtrip(p),p);});
+test('blank field IDs create independent new custom fields',()=>{const p=example(),rows=profileRows(p),extra=[...rows[1]];extra[5]='';extra[7]='另一个字段';extra[10]='新值';rows.push(extra);const out=rowsToProfile(rows,new Map(metadataRows(p)));assert.equal(out.modules[0].entries[0].fields.length,2);assert.equal(out.modules[0].entries[0].fields[1].label,'另一个字段');});
+test('blank entry and field IDs plus new title create new entry',()=>{const p=example(),rows=profileRows(p),extra=[...rows[1]];extra[3]='';extra[4]='第二段';extra[5]='';rows.push(extra);const out=rowsToProfile(rows,new Map(metadataRows(p)));assert.equal(out.modules[0].entries.length,2);});
+test('new module can be added through blank IDs',()=>{const p=example(),rows=profileRows(p),extra=[...rows[1]];extra[0]='';extra[1]='全新模块';extra[3]='';extra[5]='';rows.push(extra);assert.equal(rowsToProfile(rows,new Map(metadataRows(p))).modules.length,2);});
+test('spreadsheet duplicate field ID rejected',()=>{const p=example(),rows=profileRows(p);rows.push([...rows[1]]);assert.throws(()=>rowsToProfile(rows,new Map(metadataRows(p))),/ID 重复/);});
+test('spreadsheet inconsistent module title rejected',()=>{const p=example(),rows=profileRows(p),extra=[...rows[1]];extra[1]='不同名称';extra[5]=uid();rows.push(extra);assert.throws(()=>rowsToProfile(rows,new Map(metadataRows(p))),/模块 ID/);});
+test('spreadsheet inconsistent entry title rejected',()=>{const p=example(),rows=profileRows(p),extra=[...rows[1]];extra[4]='不同标题';extra[5]=uid();rows.push(extra);assert.throws(()=>rowsToProfile(rows,new Map(metadataRows(p))),/条目 ID/);});
+test('spreadsheet inconsistent entry parent rejected',()=>{const p=example(),rows=profileRows(p),extra=[...rows[1]];extra[0]=uid();extra[1]='其他模块';extra[5]=uid();rows.push(extra);assert.throws(()=>rowsToProfile(rows,new Map(metadataRows(p))),/条目 ID/);});
+test('spreadsheet unknown columns with content rejected',()=>{const p=example(),rows=profileRows(p);rows[1].push('unexpected');assert.throws(()=>rowsToProfile(rows,new Map(metadataRows(p))),/多余/);});
+test('spreadsheet invalid header rejected',()=>{const p=example(),rows=profileRows(p);rows[0]=[...HEADERS];rows[0][10]='改名内容';assert.throws(()=>rowsToProfile(rows,new Map(metadataRows(p))),/表头/);});
+test('spreadsheet invalid field type rejected',()=>{const p=example(),rows=profileRows(p);rows[1][8]='executable';assert.throws(()=>rowsToProfile(rows,new Map(metadataRows(p))),/字段名称/);});
+test('exported workbook never creates executable formula cells',async()=>{const p=example();p.modules[0].entries[0].fields[0].value='=1+1\n<script>alert(1)</script>\n_x000D_';const zip=await unpackZip(exportXlsx(p)),text=new TextDecoder().decode(zip.get('xl/worksheets/sheet1.xml'));assert.equal(/<f(?:[ >])/.test(text),false);assert.match(text,/t="inlineStr"/);assert.ok(text.includes('&lt;script&gt;'));assert.ok(text.includes('_x005F_x000D_'));});
+
+test('CRC32 standard reference vector',()=>assert.equal(crc32(new TextEncoder().encode('123456789')),0xcbf43926));
+test('ZIP STORE exact binary and UTF-8 round-trip',async()=>{const p=packZip({'a.xml':'测试 🌿\r\n','binary':new Uint8Array([0,1,255])}),out=await unpackZip(p);assert.equal(new TextDecoder().decode(out.get('a.xml')),'测试 🌿\r\n');assert.deepEqual(out.get('binary'),new Uint8Array([0,1,255]));});
+test('ZIP CRC corruption rejected',async()=>{const p=packZip({'a':'payload'});p[31]^=1;await assert.rejects(()=>unpackZip(p),/校验/);});
+test('ZIP path traversal rejected',async()=>await assert.rejects(()=>unpackZip(packZip({'../a':'x'})),/路径/));
+test('ZIP truncated archive rejected',async()=>await assert.rejects(()=>unpackZip(packZip({'a':'x'}).subarray(0,-3)),/有效/));
+test('ZIP file size limited before allocating output',async()=>await assert.rejects(()=>unpackZip(new Uint8Array(8*1024*1024+1)),/8 MB/));
+test('ZIP encrypted flag rejected',async()=>{const p=packZip({'a':'x'}),v=new DataView(p.buffer),end=p.length-22,cd=v.getUint32(end+16,true);v.setUint16(cd+8,1,true);await assert.rejects(()=>unpackZip(p),/加密/);});
+test('ZIP declared expanded size cap enforced',async()=>{const p=packZip({'a':'x'}),v=new DataView(p.buffer),cd=v.getUint32(p.length-6,true);v.setUint32(cd+24,17*1024*1024,true);await assert.rejects(()=>unpackZip(p),/过大/);});
+function deflateZip(text,declaredSize){const data=new TextEncoder().encode(text),compressed=deflateRawSync(data),name=new TextEncoder().encode('a'),header=new Uint8Array(31),v=new DataView(header.buffer),central=new Uint8Array(47),c=new DataView(central.buffer),end=new Uint8Array(22),e=new DataView(end.buffer);v.setUint32(0,0x04034b50,true);v.setUint16(4,20,true);v.setUint16(8,8,true);v.setUint32(14,crc32(data),true);v.setUint32(18,compressed.length,true);v.setUint32(22,declaredSize??data.length,true);v.setUint16(26,1,true);header.set(name,30);c.setUint32(0,0x02014b50,true);c.setUint16(10,8,true);c.setUint32(16,crc32(data),true);c.setUint32(20,compressed.length,true);c.setUint32(24,declaredSize??data.length,true);c.setUint16(28,1,true);central.set(name,46);e.setUint32(0,0x06054b50,true);e.setUint16(8,1,true);e.setUint16(10,1,true);e.setUint32(12,central.length,true);e.setUint32(16,header.length+compressed.length,true);return new Uint8Array(Buffer.concat([header,compressed,central,end]));}
+test('ZIP DEFLATE decompression succeeds with exact bytes',async()=>{const text='中文 hello\n'.repeat(100);const out=await unpackZip(deflateZip(text));assert.equal(new TextDecoder().decode(out.get('a')),text);});
+test('ZIP decompression exceeding declaration aborts',async()=>await assert.rejects(()=>unpackZip(deflateZip('hello'.repeat(5000),20)),/超过/));
+
+test('encrypted backup round-trips exactly',async()=>{const p=example();p.modules[0].entries[0].fields[0].value='敏感资料 00123';const text=await encryptProfile(p,'correct-horse-battery-staple');assert.ok(!text.includes('敏感资料'));assert.deepEqual(await decryptProfile(text,'correct-horse-battery-staple'),p);});
+test('wrong backup passphrase rejected without returning plaintext',async()=>{const text=await encryptProfile(example(),'correct-password-123');await assert.rejects(()=>decryptProfile(text,'incorrect-password-456'),/口令不正确/);});
+test('AES-GCM tamper rejection',async()=>{const v=JSON.parse(await encryptProfile(example(),'correct-password-123'));v.data=(v.data[0]==='A'?'B':'A')+v.data.slice(1);await assert.rejects(()=>decryptProfile(JSON.stringify(v),'correct-password-123'),/口令不正确/);});
+test('encryption uses fresh salt and IV for each backup',async()=>{const a=JSON.parse(await encryptProfile(example(),'correct-password-123')),b=JSON.parse(await encryptProfile(example(),'correct-password-123'));assert.notEqual(a.salt,b.salt);assert.notEqual(a.iv,b.iv);});
+test('short encryption passphrase rejected',async()=>await assert.rejects(()=>encryptProfile(example(),'short'),/12/));
+test('attacker-selected KDF cost rejected before computation',async()=>{const v=JSON.parse(await encryptProfile(example(),'correct-password-123'));v.iterations=999999999;await assert.rejects(()=>decryptProfile(JSON.stringify(v),'correct-password-123'),/格式/);});
+
+test('storage initializes empty values, no personal data',async()=>{const d=driver(),s=createStore(d),r=await s.load();assert.equal(stats(r.profile).filled,0);assert.equal(r.epoch,0);});
+test('save increments current revision, not the imported revision',async()=>{const s=createStore(driver()),a=await s.load(),p=clone(a.profile);p.revision=9999;const b=await s.save(p,a.profile.revision,'',a.epoch);assert.equal(b.profile.revision,1);});
+test('stale concurrent write rejected and winner preserved',async()=>{const s=createStore(driver()),a=await s.load(),winner=clone(a.profile);winner.name='winner';await s.save(winner,0);const stale=clone(a.profile);stale.name='stale';await assert.rejects(()=>s.save(stale,0),e=>e.code==='CONFLICT');assert.equal((await s.load()).profile.name,'winner');});
+test('checkpoints preserve at most 3 previous versions',async()=>{const s=createStore(driver());let a=await s.load();for(let i=0;i<5;i++){const p=clone(a.profile);p.name='version'+i;a=await s.save(p,a.profile.revision,'checkpoint '+i);}assert.equal((await s.history()).length,3);assert.equal((await s.history())[0].profile.name,'version3');});
+test('ordinary typing saves do not create history snapshots',async()=>{const s=createStore(driver()),a=await s.load();await s.save(a.profile,0);assert.equal((await s.history()).length,0);});
+test('quota failure keeps last persisted state intact',async()=>{const d=driver(),s=createStore(d),a=await s.load();d.set=async()=>{throw new Error('QUOTA_BYTES');};const p=clone(a.profile);p.name='not saved';await assert.rejects(()=>s.save(p,0),/QUOTA/);assert.equal((await s.load()).profile.name,a.profile.name);});
+test('erase clears history and increments epoch to prevent resurrecting old drafts',async()=>{const s=createStore(driver()),a=await s.load();await s.save(a.profile,0,'checkpoint');const empty=await s.erase();assert.equal(empty.profile.modules.length,0);assert.equal((await s.history()).length,0);await assert.rejects(()=>s.save(a.profile,0,'',0),e=>e.code==='CONFLICT');});
+test('corrupt saved data is not silently reset',async()=>{const d=driver();await d.set(STORE_KEY,{profile:{version:999},history:[]});const s=createStore(d);await assert.rejects(()=>s.load(),/不支持资料版本/);assert.equal((await d.get(STORE_KEY)).profile.version,999);});

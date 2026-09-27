@@ -1,0 +1,22 @@
+{
+  "version": "1.1.0-rc.1",
+  "source_sha256": "ba1face72fbb93d1ebf462c94cbcbd065ea115f5cbcda7ba0ec7d21ce0c0a7f7",
+  "generated_at": "2026-09-23T09:03:51.871Z",
+  "decision": "HOLD",
+  "failures": [
+    "人工发布验收尚无有效证据：native_chrome",
+    "人工发布验收尚无有效证据：native_focus_security",
+    "人工发布验收尚无有效证据：real_sites",
+    "人工发布验收尚无有效证据：excel_editors",
+    "人工发布验收尚无有效证据：usability",
+    "人工发布验收尚无有效证据：commercial",
+    "人工发布验收尚无有效证据：store_review",
+    "未确认运营主体",
+    "未提供真实支持邮箱",
+    "未提供可公开访问的正式 HTTPS 隐私政策地址",
+    "未确认销售渠道",
+    "未提供运营证据：customer_license_evidence",
+    "未提供运营证据：refund_and_support_evidence"
+  ],
+  "notice": "此门禁检查证据文件与测试状态，不替代真人验收、安全审计、法律审查或商店审核。"
+}

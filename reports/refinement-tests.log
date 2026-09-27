@@ -1,0 +1,33 @@
+PASS theme blue: live colors, selected state, stored preference, profile unchanged
+PASS theme teal: live colors, selected state, stored preference, profile unchanged
+PASS theme violet: live colors, selected state, stored preference, profile unchanged
+PASS theme ruby: live colors, selected state, stored preference, profile unchanged
+PASS theme bronze: live colors, selected state, stored preference, profile unchanged
+PASS theme slate: live colors, selected state, stored preference, profile unchanged
+PASS theme persists on a fresh app boot with saved preference
+PASS malformed preferences fall back without modifying profile
+PASS one global search, Ctrl K focus and Escape restoration
+PASS global multi-term NFKC search and navigation restores selected module
+PASS IME composition does not run half-composed searches
+PASS global search never exposes secret values, labels remain findable
+PASS rare empty-field and help actions remain available from settings
+PASS layout panel 320px: viewport, 24px targets and collapsible nav
+PASS layout panel 360px: viewport, 24px targets and collapsible nav
+PASS layout panel 420px: viewport, 24px targets and collapsible nav
+PASS layout panel 600px: viewport, 24px targets and collapsible nav
+PASS layout manager 360px: viewport, 24px targets and collapsible nav
+PASS layout manager 768px: viewport, 24px targets and collapsible nav
+PASS layout manager 1440px: viewport, 24px targets and collapsible nav
+PASS 120-character labels and 30k text stay bounded with full text accessible
+PASS large root text does not block editing or introduce page overflow (not native browser zoom)
+PASS unchanged target polling retains keyboard focus
+PASS field settings hidden visually remain keyboard reachable
+PASS original v1 workbook remains fully importable after format upgrade
+PASS user Excel has three visible columns, hidden structure, text cells and freeze pane
+PASS edited worksheet tab and visible cell import with identities intact
+PASS malformed human worksheet does not partially overwrite profile
+PASS copied Excel record block becomes an independent entry without user-managed IDs
+PASS global search finds one record among 5000 fields without freezing the UI
+PASS broad search reveals all 450 matches in bounded batches without silent truncation
+PASS work-experience compact layout renders three independent records
+{"total": 32, "passed": 32, "failed": 0}

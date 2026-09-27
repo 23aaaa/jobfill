@@ -1,23 +1,7 @@
-# 依赖
 node_modules/
-
-# 构建产物
-dist/
-
-# 个人简历数据（包含隐私信息，请勿提交）
-resume-data.js
-src/data/resume-data.local.ts
-
-# 临时文件
-*.tmp
-3c7b8ab6c5e7bdb92c3f3ad10bb08762.jpg
-
-# OS
+__pycache__/
+.venv/
+*.pyc
 .DS_Store
-Thumbs.db
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
+reports/http.pid
+reports/http.log

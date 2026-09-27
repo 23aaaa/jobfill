@@ -1,0 +1,376 @@
+{
+  "source_sha256": "ba1face72fbb93d1ebf462c94cbcbd065ea115f5cbcda7ba0ec7d21ce0c0a7f7",
+  "product": "小师弟求职",
+  "version": "1.1.0-rc.1",
+  "generated_at": "2026-09-23T09:02:15Z",
+  "environment": {
+    "navigation": "blocked",
+    "extension_load": "blocked-or-not-loaded",
+    "clipboard": "mocked by harness",
+    "downloads": "Blob creation and filename dispatch captured; OS download not validated",
+    "browser_version": "144.0.7559.96",
+    "navigation_error": "Page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at http://127.0.0.1:44625/dist/%E5%B0%8F%E5%B8%88%E5%BC%9F%E6%B1%82%E8%81%8C-%E8%B5%84%E6%96%99%E7%BB%B4%E6%8A%A4.html"
+  },
+  "scope_notice": "Real Chromium DOM/CSS and production UI/DOM-adapter code. Origin storage, Web Locks, clipboard, download dispatch and Chrome extension APIs are shimmed in the UI harness. This is NOT proof of native extension, real React/Vue libraries, real corporate recruiting portals or store approval.",
+  "counts": {
+    "passed": 58,
+    "failed": 0,
+    "total": 58
+  },
+  "results": [
+    {
+      "name": "manager renders seeded profile with labeled controls",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 1.141
+    },
+    {
+      "name": "autosave preserves raw Unicode and surrounding spaces",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 1.401
+    },
+    {
+      "name": "custom module and custom grouped multiline field can be created and edited",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 2.171
+    },
+    {
+      "name": "module rename preserves its stable identity",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 1.812
+    },
+    {
+      "name": "duplicate entry keeps content and assigns independent IDs",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 1.625
+    },
+    {
+      "name": "entry collapse is animated and removes hidden fields from keyboard navigation",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 0.838
+    },
+    {
+      "name": "global search traverses modules and entries",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 0.847
+    },
+    {
+      "name": "sensitive values are masked, excluded from search, and revealed only after consent",
+      "status": "passed",
+      "scope": "ui-with-mocked-chrome",
+      "seconds": 1.139
+    },
+    {
+      "name": "long sidebar preview has access to exact full text",
+      "status": "passed",
+      "scope": "ui-with-mocked-chrome",
+      "seconds": 0.822
+    },
+    {
+      "name": "profile markup is displayed as text without creating HTML or executing scripts",
+      "status": "passed",
+      "scope": "ui-with-mocked-chrome",
+      "seconds": 0.645
+    },
+    {
+      "name": "canceling an import leaves persisted data untouched",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 1.118
+    },
+    {
+      "name": "confirmed JSON import replaces only after preview and checkpoints prior data",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 1.177
+    },
+    {
+      "name": "malformed JSON does not partially change current data",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 1.004
+    },
+    {
+      "name": "oversized file is rejected before parsing",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 10.363
+    },
+    {
+      "name": "real browser XLSX writer and parser preserve IDs, strings, CRLF, XML text and escape-like literals",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 1.574
+    },
+    {
+      "name": "independent artifact_tool load-edit-save XLSX imports with all 230 fields",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 1.359
+    },
+    {
+      "name": "XLSX parser rejects formula workbook without changing current profile",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 1.052
+    },
+    {
+      "name": "XLSX parser rejects number workbook without changing current profile",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 1.079
+    },
+    {
+      "name": "XLSX parser rejects entity workbook without changing current profile",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 1.061
+    },
+    {
+      "name": "XLSX parser rejects macro workbook without changing current profile",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 1.051
+    },
+    {
+      "name": "XLSX parser rejects path workbook without changing current profile",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 0.982
+    },
+    {
+      "name": "backup passphrase mismatch blocks export",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 0.907
+    },
+    {
+      "name": "concurrent revision conflict retains user draft and allows exporting it",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 1.648
+    },
+    {
+      "name": "explicit permanent erase clears profile and local history",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 0.874
+    },
+    {
+      "name": "sidebar layout has no horizontal overflow at 320px",
+      "status": "passed",
+      "scope": "ui-with-mocked-chrome",
+      "seconds": 0.944
+    },
+    {
+      "name": "sidebar layout has no horizontal overflow at 360px",
+      "status": "passed",
+      "scope": "ui-with-mocked-chrome",
+      "seconds": 0.968
+    },
+    {
+      "name": "sidebar layout has no horizontal overflow at 420px",
+      "status": "passed",
+      "scope": "ui-with-mocked-chrome",
+      "seconds": 0.843
+    },
+    {
+      "name": "sidebar layout has no horizontal overflow at 600px",
+      "status": "passed",
+      "scope": "ui-with-mocked-chrome",
+      "seconds": 0.908
+    },
+    {
+      "name": "sidebar layout has no horizontal overflow at 800px",
+      "status": "passed",
+      "scope": "ui-with-mocked-chrome",
+      "seconds": 0.905
+    },
+    {
+      "name": "manager layout has no horizontal overflow at 360px",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 0.871
+    },
+    {
+      "name": "manager layout has no horizontal overflow at 768px",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 0.825
+    },
+    {
+      "name": "manager layout has no horizontal overflow at 1440px",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 0.945
+    },
+    {
+      "name": "native setter updates controlled-input value tracker fixture (not a React library test)",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.755
+    },
+    {
+      "name": "native text field fills exact value and never submits the form",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.727
+    },
+    {
+      "name": "textarea preserves symbols and line structure; browser line endings normalize to LF",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.633
+    },
+    {
+      "name": "native select matches an exact option label",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.722
+    },
+    {
+      "name": "ambiguous select labels do not guess or overwrite",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.612
+    },
+    {
+      "name": "maxlength overflow is rejected without truncation or mutation",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.54
+    },
+    {
+      "name": "date formatting that would be changed by the control is rejected",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.615
+    },
+    {
+      "name": "canonical native date input accepted",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.7
+    },
+    {
+      "name": "unsafe or unsupported control is not a fill target: #password",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.441
+    },
+    {
+      "name": "unsafe or unsupported control is not a fill target: #upload",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.457
+    },
+    {
+      "name": "unsafe or unsupported control is not a fill target: #readonly",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.445
+    },
+    {
+      "name": "unsafe or unsupported control is not a fill target: #disabled",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.441
+    },
+    {
+      "name": "unsafe or unsupported control is not a fill target: #hidden",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.404
+    },
+    {
+      "name": "unsafe or unsupported control is not a fill target: #rich",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.375
+    },
+    {
+      "name": "detached form target cannot receive a stale fill",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.558
+    },
+    {
+      "name": "wrong focus token is rejected before changing the field",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.565
+    },
+    {
+      "name": "canceled beforeinput aborts the write",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.576
+    },
+    {
+      "name": "last fill can be undone without submitting",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.661
+    },
+    {
+      "name": "undo refuses to overwrite a later user edit",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.727
+    },
+    {
+      "name": "simple contenteditable preserves multiline literal text and supports undo",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.707
+    },
+    {
+      "name": "open shadow-root native input can be selected and filled",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.724
+    },
+    {
+      "name": "framework replacement/reset is reported as failure, not claimed success",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.696
+    },
+    {
+      "name": "sidebar click routes one field to a separate real DOM and supports undo (Chrome transport mocked)",
+      "status": "passed",
+      "scope": "ui-adapter-integration-mocked-chrome",
+      "seconds": 1.382
+    },
+    {
+      "name": "controls inherited-disabled through a fieldset are rejected",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.536
+    },
+    {
+      "name": "focus change inside the site rejects the prior target token",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.557
+    },
+    {
+      "name": "normal app edit flow initiates no HTTP or HTTPS requests",
+      "status": "passed",
+      "scope": "ui-with-memory-storage",
+      "seconds": 1.111
+    }
+  ],
+  "release_blockers": [
+    "Native side panel, activeTab grant and storage trust boundaries need verification in an unrestricted browser.",
+    "Real account flows on ByteDance / Alibaba / Meituan have not been tested.",
+    "Payment, licensing, merchant identity, public privacy-policy hosting and store review are not completed.",
+    "No real user usability, payment-intent or commercial conversion study has been conducted."
+  ]
+}

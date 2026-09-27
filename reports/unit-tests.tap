@@ -1,0 +1,799 @@
+TAP version 13
+# Subtest: local profile storage restricted to trusted extension contexts
+ok 1 - local profile storage restricted to trusted extension contexts
+  ---
+  duration_ms: 5.729757
+  type: 'test'
+  ...
+# Subtest: content scripts cannot read the whole profile
+ok 2 - content scripts cannot read the whole profile
+  ---
+  duration_ms: 4.238592
+  type: 'test'
+  ...
+# Subtest: content scripts cannot overwrite the profile
+ok 3 - content scripts cannot overwrite the profile
+  ---
+  duration_ms: 1.193277
+  type: 'test'
+  ...
+# Subtest: content scripts cannot erase the profile
+ok 4 - content scripts cannot erase the profile
+  ---
+  duration_ms: 1.295724
+  type: 'test'
+  ...
+# Subtest: unrecognized extension page cannot access profile
+ok 5 - unrecognized extension page cannot access profile
+  ---
+  duration_ms: 1.170836
+  type: 'test'
+  ...
+# Subtest: different extension ID rejected
+ok 6 - different extension ID rejected
+  ---
+  duration_ms: 1.351038
+  type: 'test'
+  ...
+# Subtest: profile can be read from bundled manager
+ok 7 - profile can be read from bundled manager
+  ---
+  duration_ms: 12.19915
+  type: 'test'
+  ...
+# Subtest: focus origin derived from sender, not a claimed payload
+ok 8 - focus origin derived from sender, not a claimed payload
+  ---
+  duration_ms: 1.582067
+  type: 'test'
+  ...
+# Subtest: single explicit field routed only to selected document
+ok 9 - single explicit field routed only to selected document
+  ---
+  duration_ms: 2.191191
+  type: 'test'
+  ...
+# Subtest: different tab cannot receive stale field fill
+ok 10 - different tab cannot receive stale field fill
+  ---
+  duration_ms: 1.679396
+  type: 'test'
+  ...
+# Subtest: different target token rejects delayed confirmation
+ok 11 - different target token rejects delayed confirmation
+  ---
+  duration_ms: 1.326176
+  type: 'test'
+  ...
+# Subtest: empty field never clears an existing input
+ok 12 - empty field never clears an existing input
+  ---
+  duration_ms: 1.347301
+  type: 'test'
+  ...
+# Subtest: navigation clears retained target and undo identity
+ok 13 - navigation clears retained target and undo identity
+  ---
+  duration_ms: 1.90677
+  type: 'test'
+  ...
+# Subtest: focus from one document does not clear another document target
+ok 14 - focus from one document does not clear another document target
+  ---
+  duration_ms: 2.05837
+  type: 'test'
+  ...
+# Subtest: untrusted focus without document identity ignored
+ok 15 - untrusted focus without document identity ignored
+  ---
+  duration_ms: 1.242037
+  type: 'test'
+  ...
+# Subtest: worker serializes simultaneous saves with compare-and-swap
+ok 16 - worker serializes simultaneous saves with compare-and-swap
+  ---
+  duration_ms: 7.940644
+  type: 'test'
+  ...
+# Subtest: injection failure gives recoverable grant instructions
+ok 17 - injection failure gives recoverable grant instructions
+  ---
+  duration_ms: 1.707448
+  type: 'test'
+  ...
+# Subtest: internal browser page never receives injection
+ok 18 - internal browser page never receives injection
+  ---
+  duration_ms: 3.937485
+  type: 'test'
+  ...
+# Subtest: undo routes to only the last filled document of current tab
+ok 19 - undo routes to only the last filled document of current tab
+  ---
+  duration_ms: 1.881505
+  type: 'test'
+  ...
+# Subtest: starter contains useful default modules, not the entire catalog
+ok 20 - starter contains useful default modules, not the entire catalog
+  ---
+  duration_ms: 13.420989
+  type: 'test'
+  ...
+# Subtest: complete template validates and includes all 20 progressive modules
+ok 21 - complete template validates and includes all 20 progressive modules
+  ---
+  duration_ms: 5.003795
+  type: 'test'
+  ...
+# Subtest: example data is explicitly marked fictitious
+ok 22 - example data is explicitly marked fictitious
+  ---
+  duration_ms: 3.289355
+  type: 'test'
+  ...
+# Subtest: dynamic modules, entries, groups and fields survive validation
+ok 23 - dynamic modules, entries, groups and fields survive validation
+  ---
+  duration_ms: 3.803622
+  type: 'test'
+  ...
+# Subtest: leading zeros, exact long numeric IDs, Unicode and whitespace preserved
+ok 24 - leading zeros, exact long numeric IDs, Unicode and whitespace preserved
+  ---
+  duration_ms: 0.278238
+  type: 'test'
+  ...
+# Subtest: no semantic rewriting, trimming or date guessing
+ok 25 - no semantic rewriting, trimming or date guessing
+  ---
+  duration_ms: 0.205082
+  type: 'test'
+  ...
+# Subtest: future schema version rejected without migration guessing
+ok 26 - future schema version rejected without migration guessing
+  ---
+  duration_ms: 0.972103
+  type: 'test'
+  ...
+# Subtest: duplicate global IDs rejected
+ok 27 - duplicate global IDs rejected
+  ---
+  duration_ms: 0.361515
+  type: 'test'
+  ...
+# Subtest: numeric field values rejected instead of losing precision
+ok 28 - numeric field values rejected instead of losing precision
+  ---
+  duration_ms: 0.326792
+  type: 'test'
+  ...
+# Subtest: Excel cell length limit enforced
+ok 29 - Excel cell length limit enforced
+  ---
+  duration_ms: 1.091246
+  type: 'test'
+  ...
+# Subtest: exact maximum field length accepted
+ok 30 - exact maximum field length accepted
+  ---
+  duration_ms: 0.651423
+  type: 'test'
+  ...
+# Subtest: invalid control characters rejected
+ok 31 - invalid control characters rejected
+  ---
+  duration_ms: 0.325465
+  type: 'test'
+  ...
+# Subtest: unpaired surrogate rejected before TextEncoder replacement
+ok 32 - unpaired surrogate rejected before TextEncoder replacement
+  ---
+  duration_ms: 0.479705
+  type: 'test'
+  ...
+# Subtest: empty module name rejected
+ok 33 - empty module name rejected
+  ---
+  duration_ms: 0.277587
+  type: 'test'
+  ...
+# Subtest: unknown properties discarded and prototype keys never merged
+ok 34 - unknown properties discarded and prototype keys never merged
+  ---
+  duration_ms: 0.379527
+  type: 'test'
+  ...
+# Subtest: malformed JSON fails explicitly
+ok 35 - malformed JSON fails explicitly
+  ---
+  duration_ms: 0.51896
+  type: 'test'
+  ...
+# Subtest: profile byte quota enforced
+ok 36 - profile byte quota enforced
+  ---
+  duration_ms: 160.877503
+  type: 'test'
+  ...
+# Subtest: module count bounded
+ok 37 - module count bounded
+  ---
+  duration_ms: 2.342848
+  type: 'test'
+  ...
+# Subtest: move operations preserve identities and reject out-of-range moves
+ok 38 - move operations preserve identities and reject out-of-range moves
+  ---
+  duration_ms: 0.467014
+  type: 'test'
+  ...
+# Subtest: duplicate entry gets new identity and independent fields
+ok 39 - duplicate entry gets new identity and independent fields
+  ---
+  duration_ms: 0.595702
+  type: 'test'
+  ...
+# Subtest: sensitive value not searchable while its label remains searchable
+ok 40 - sensitive value not searchable while its label remains searchable
+  ---
+  duration_ms: 0.802214
+  type: 'test'
+  ...
+# Subtest: stats count filled fields without treating optional empties as required
+ok 41 - stats count filled fields without treating optional empties as required
+  ---
+  duration_ms: 0.177895
+  type: 'test'
+  ...
+# Subtest: workbook rows round-trip full template exactly
+ok 42 - workbook rows round-trip full template exactly
+  ---
+  duration_ms: 8.414097
+  type: 'test'
+  ...
+# Subtest: workbook rows round-trip arbitrary labels and special text
+ok 43 - workbook rows round-trip arbitrary labels and special text
+  ---
+  duration_ms: 0.246491
+  type: 'test'
+  ...
+# Subtest: empty modules and empty entries round-trip
+ok 44 - empty modules and empty entries round-trip
+  ---
+  duration_ms: 0.409618
+  type: 'test'
+  ...
+# Subtest: blank field IDs create independent new custom fields
+ok 45 - blank field IDs create independent new custom fields
+  ---
+  duration_ms: 0.243719
+  type: 'test'
+  ...
+# Subtest: blank entry and field IDs plus new title create new entry
+ok 46 - blank entry and field IDs plus new title create new entry
+  ---
+  duration_ms: 0.204783
+  type: 'test'
+  ...
+# Subtest: new module can be added through blank IDs
+ok 47 - new module can be added through blank IDs
+  ---
+  duration_ms: 0.302122
+  type: 'test'
+  ...
+# Subtest: spreadsheet duplicate field ID rejected
+ok 48 - spreadsheet duplicate field ID rejected
+  ---
+  duration_ms: 0.28138
+  type: 'test'
+  ...
+# Subtest: spreadsheet inconsistent module title rejected
+ok 49 - spreadsheet inconsistent module title rejected
+  ---
+  duration_ms: 0.277202
+  type: 'test'
+  ...
+# Subtest: spreadsheet inconsistent entry title rejected
+ok 50 - spreadsheet inconsistent entry title rejected
+  ---
+  duration_ms: 0.256157
+  type: 'test'
+  ...
+# Subtest: spreadsheet inconsistent entry parent rejected
+ok 51 - spreadsheet inconsistent entry parent rejected
+  ---
+  duration_ms: 0.486399
+  type: 'test'
+  ...
+# Subtest: spreadsheet unknown columns with content rejected
+ok 52 - spreadsheet unknown columns with content rejected
+  ---
+  duration_ms: 0.275795
+  type: 'test'
+  ...
+# Subtest: spreadsheet invalid header rejected
+ok 53 - spreadsheet invalid header rejected
+  ---
+  duration_ms: 0.197309
+  type: 'test'
+  ...
+# Subtest: spreadsheet invalid field type rejected
+ok 54 - spreadsheet invalid field type rejected
+  ---
+  duration_ms: 0.213334
+  type: 'test'
+  ...
+# Subtest: exported workbook never creates executable formula cells
+ok 55 - exported workbook never creates executable formula cells
+  ---
+  duration_ms: 12.967095
+  type: 'test'
+  ...
+# Subtest: CRC32 standard reference vector
+ok 56 - CRC32 standard reference vector
+  ---
+  duration_ms: 0.2722
+  type: 'test'
+  ...
+# Subtest: ZIP STORE exact binary and UTF-8 round-trip
+ok 57 - ZIP STORE exact binary and UTF-8 round-trip
+  ---
+  duration_ms: 0.929992
+  type: 'test'
+  ...
+# Subtest: ZIP CRC corruption rejected
+ok 58 - ZIP CRC corruption rejected
+  ---
+  duration_ms: 0.92713
+  type: 'test'
+  ...
+# Subtest: ZIP path traversal rejected
+ok 59 - ZIP path traversal rejected
+  ---
+  duration_ms: 0.442962
+  type: 'test'
+  ...
+# Subtest: ZIP truncated archive rejected
+ok 60 - ZIP truncated archive rejected
+  ---
+  duration_ms: 0.579521
+  type: 'test'
+  ...
+# Subtest: ZIP file size limited before allocating output
+ok 61 - ZIP file size limited before allocating output
+  ---
+  duration_ms: 0.879106
+  type: 'test'
+  ...
+# Subtest: ZIP encrypted flag rejected
+ok 62 - ZIP encrypted flag rejected
+  ---
+  duration_ms: 0.428271
+  type: 'test'
+  ...
+# Subtest: ZIP declared expanded size cap enforced
+ok 63 - ZIP declared expanded size cap enforced
+  ---
+  duration_ms: 0.808425
+  type: 'test'
+  ...
+# Subtest: ZIP DEFLATE decompression succeeds with exact bytes
+ok 64 - ZIP DEFLATE decompression succeeds with exact bytes
+  ---
+  duration_ms: 80.853273
+  type: 'test'
+  ...
+# Subtest: ZIP decompression exceeding declaration aborts
+ok 65 - ZIP decompression exceeding declaration aborts
+  ---
+  duration_ms: 14.782341
+  type: 'test'
+  ...
+# Subtest: encrypted backup round-trips exactly
+ok 66 - encrypted backup round-trips exactly
+  ---
+  duration_ms: 187.315288
+  type: 'test'
+  ...
+# Subtest: wrong backup passphrase rejected without returning plaintext
+ok 67 - wrong backup passphrase rejected without returning plaintext
+  ---
+  duration_ms: 228.163754
+  type: 'test'
+  ...
+# Subtest: AES-GCM tamper rejection
+ok 68 - AES-GCM tamper rejection
+  ---
+  duration_ms: 181.093271
+  type: 'test'
+  ...
+# Subtest: encryption uses fresh salt and IV for each backup
+ok 69 - encryption uses fresh salt and IV for each backup
+  ---
+  duration_ms: 178.448626
+  type: 'test'
+  ...
+# Subtest: short encryption passphrase rejected
+ok 70 - short encryption passphrase rejected
+  ---
+  duration_ms: 0.524591
+  type: 'test'
+  ...
+# Subtest: attacker-selected KDF cost rejected before computation
+ok 71 - attacker-selected KDF cost rejected before computation
+  ---
+  duration_ms: 95.556477
+  type: 'test'
+  ...
+# Subtest: storage initializes empty values, no personal data
+ok 72 - storage initializes empty values, no personal data
+  ---
+  duration_ms: 2.172206
+  type: 'test'
+  ...
+# Subtest: save increments current revision, not the imported revision
+ok 73 - save increments current revision, not the imported revision
+  ---
+  duration_ms: 2.616953
+  type: 'test'
+  ...
+# Subtest: stale concurrent write rejected and winner preserved
+ok 74 - stale concurrent write rejected and winner preserved
+  ---
+  duration_ms: 4.567346
+  type: 'test'
+  ...
+# Subtest: checkpoints preserve at most 3 previous versions
+ok 75 - checkpoints preserve at most 3 previous versions
+  ---
+  duration_ms: 17.964136
+  type: 'test'
+  ...
+# Subtest: ordinary typing saves do not create history snapshots
+ok 76 - ordinary typing saves do not create history snapshots
+  ---
+  duration_ms: 3.616106
+  type: 'test'
+  ...
+# Subtest: quota failure keeps last persisted state intact
+ok 77 - quota failure keeps last persisted state intact
+  ---
+  duration_ms: 4.787825
+  type: 'test'
+  ...
+# Subtest: erase clears history and increments epoch to prevent resurrecting old drafts
+ok 78 - erase clears history and increments epoch to prevent resurrecting old drafts
+  ---
+  duration_ms: 3.599202
+  type: 'test'
+  ...
+# Subtest: corrupt saved data is not silently reset
+ok 79 - corrupt saved data is not silently reset
+  ---
+  duration_ms: 0.198514
+  type: 'test'
+  ...
+# Subtest: friendly template exposes only group, label and value as visible data columns
+ok 80 - friendly template exposes only group, label and value as visible data columns
+  ---
+  duration_ms: 14.955947
+  type: 'test'
+  ...
+# Subtest: v2 round trip preserves full model and custom groups exactly
+ok 81 - v2 round trip preserves full model and custom groups exactly
+  ---
+  duration_ms: 18.918402
+  type: 'test'
+  ...
+# Subtest: v2 exact Unicode, leading zeros, multiline, CRLF, formulas-as-text and original spaces
+ok 82 - v2 exact Unicode, leading zeros, multiline, CRLF, formulas-as-text and original spaces
+  ---
+  duration_ms: 0.57915
+  type: 'test'
+  ...
+# Subtest: v2 empty profile is supported without manufacturing fields
+ok 83 - v2 empty profile is supported without manufacturing fields
+  ---
+  duration_ms: 0.226501
+  type: 'test'
+  ...
+# Subtest: v2 empty category and empty record survive round trip
+ok 84 - v2 empty category and empty record survive round trip
+  ---
+  duration_ms: 0.348047
+  type: 'test'
+  ...
+# Subtest: edit visible content cell is authoritative, no stale hidden data copy
+ok 85 - edit visible content cell is authoritative, no stale hidden data copy
+  ---
+  duration_ms: 0.356272
+  type: 'test'
+  ...
+# Subtest: visible record title can be renamed without editing any ID
+ok 86 - visible record title can be renamed without editing any ID
+  ---
+  duration_ms: 0.264088
+  type: 'test'
+  ...
+# Subtest: renaming the worksheet tab renames category and keeps its identity
+ok 87 - renaming the worksheet tab renames category and keeps its identity
+  ---
+  duration_ms: 0.26221
+  type: 'test'
+  ...
+# Subtest: renamed field preserves ID, type and sensitive flag
+ok 88 - renamed field preserves ID, type and sensitive flag
+  ---
+  duration_ms: 0.46973
+  type: 'test'
+  ...
+# Subtest: new plain visible row becomes a custom field without hidden IDs
+ok 89 - new plain visible row becomes a custom field without hidden IDs
+  ---
+  duration_ms: 0.385539
+  type: 'test'
+  ...
+# Subtest: new row inherits preceding group only when no explicit group is supplied
+ok 90 - new row inherits preceding group only when no explicit group is supplied
+  ---
+  duration_ms: 0.324978
+  type: 'test'
+  ...
+# Subtest: an originally empty group stays empty on round trip
+ok 91 - an originally empty group stays empty on round trip
+  ---
+  duration_ms: 0.233073
+  type: 'test'
+  ...
+# Subtest: copying an entire field row creates an independent new field
+ok 92 - copying an entire field row creates an independent new field
+  ---
+  duration_ms: 0.333457
+  type: 'test'
+  ...
+# Subtest: copying an entire record block assigns independent record and field identities
+ok 93 - copying an entire record block assigns independent record and field identities
+  ---
+  duration_ms: 0.340068
+  type: 'test'
+  ...
+# Subtest: duplicating a worksheet creates a new independent category
+ok 94 - duplicating a worksheet creates a new independent category
+  ---
+  duration_ms: 0.484783
+  type: 'test'
+  ...
+# Subtest: moving tabs preserves identity and follows user ordering
+ok 95 - moving tabs preserves identity and follows user ordering
+  ---
+  duration_ms: 11.119684
+  type: 'test'
+  ...
+# Subtest: deleting a whole worksheet actually removes that category
+ok 96 - deleting a whole worksheet actually removes that category
+  ---
+  duration_ms: 3.512981
+  type: 'test'
+  ...
+# Subtest: deleting only a value keeps the empty field
+ok 97 - deleting only a value keeps the empty field
+  ---
+  duration_ms: 0.361809
+  type: 'test'
+  ...
+# Subtest: deleting a field row removes the field
+ok 98 - deleting a field row removes the field
+  ---
+  duration_ms: 0.247504
+  type: 'test'
+  ...
+# Subtest: new private identifier labels default to sensitive
+ok 99 - new private identifier labels default to sensitive
+  ---
+  duration_ms: 0.246304
+  type: 'test'
+  ...
+# Subtest: v2 rejects changed visible headers
+ok 100 - v2 rejects changed visible headers
+  ---
+  duration_ms: 4.33204
+  type: 'test'
+  ...
+# Subtest: v2 rejects unknown internal row kind
+ok 101 - v2 rejects unknown internal row kind
+  ---
+  duration_ms: 0.298804
+  type: 'test'
+  ...
+# Subtest: v2 rejects invalid field type
+ok 102 - v2 rejects invalid field type
+  ---
+  duration_ms: 0.265102
+  type: 'test'
+  ...
+# Subtest: v2 rejects invalid sensitive flag
+ok 103 - v2 rejects invalid sensitive flag
+  ---
+  duration_ms: 0.334684
+  type: 'test'
+  ...
+# Subtest: v2 rejects missing field label
+ok 104 - v2 rejects missing field label
+  ---
+  duration_ms: 0.270377
+  type: 'test'
+  ...
+# Subtest: v2 rejects foreign record identity
+ok 105 - v2 rejects foreign record identity
+  ---
+  duration_ms: 1.303159
+  type: 'test'
+  ...
+# Subtest: v2 rejects value accidentally placed on an entry header
+ok 106 - v2 rejects value accidentally placed on an entry header
+  ---
+  duration_ms: 0.259175
+  type: 'test'
+  ...
+# Subtest: v2 rejects unexpected extra data column
+ok 107 - v2 rejects unexpected extra data column
+  ---
+  duration_ms: 0.219647
+  type: 'test'
+  ...
+# Subtest: v2 rejects deleted record header with stranded identified fields
+ok 108 - v2 rejects deleted record header with stranded identified fields
+  ---
+  duration_ms: 0.196871
+  type: 'test'
+  ...
+# Subtest: v2 rejects duplicate worksheet name
+ok 109 - v2 rejects duplicate worksheet name
+  ---
+  duration_ms: 0.321232
+  type: 'test'
+  ...
+# Subtest: v2 rejects malicious sheet metadata version
+ok 110 - v2 rejects malicious sheet metadata version
+  ---
+  duration_ms: 0.202956
+  type: 'test'
+  ...
+# Subtest: v2 rejects cross-record field IDs
+ok 111 - v2 rejects cross-record field IDs
+  ---
+  duration_ms: 0.220165
+  type: 'test'
+  ...
+# Subtest: long or forbidden worksheet names do not destroy original category names
+ok 112 - long or forbidden worksheet names do not destroy original category names
+  ---
+  duration_ms: 0.361402
+  type: 'test'
+  ...
+# Subtest: Excel case-insensitive tab collisions are safely disambiguated
+ok 113 - Excel case-insensitive tab collisions are safely disambiguated
+  ---
+  duration_ms: 0.466215
+  type: 'test'
+  ...
+# Subtest: reserved metadata and help names can be used as user category names
+ok 114 - reserved metadata and help names can be used as user category names
+  ---
+  duration_ms: 0.288792
+  type: 'test'
+  ...
+# Subtest: row heights are bounded for a 32767-character field
+ok 115 - row heights are bounded for a 32767-character field
+  ---
+  duration_ms: 3.524079
+  type: 'test'
+  ...
+# Subtest: export hides only structure columns and never the data value column
+ok 116 - export hides only structure columns and never the data value column
+  ---
+  duration_ms: 5.733085
+  type: 'test'
+  ...
+# Subtest: global search tokenizes spaces, folds case and full-width characters
+ok 117 - global search tokenizes spaces, folds case and full-width characters
+  ---
+  duration_ms: 0.553553
+  type: 'test'
+  ...
+# Subtest: global search treats regex / script punctuation literally
+ok 118 - global search treats regex / script punctuation literally
+  ---
+  duration_ms: 0.175889
+  type: 'test'
+  ...
+# Subtest: multi-term global search never indexes sensitive values
+ok 119 - multi-term global search never indexes sensitive values
+  ---
+  duration_ms: 0.113682
+  type: 'test'
+  ...
+# Subtest: UI preferences validate untrusted storage and use safe defaults
+ok 120 - UI preferences validate untrusted storage and use safe defaults
+  ---
+  duration_ms: 0.237085
+  type: 'test'
+  ...
+# Subtest: theme blue: white button labels >=4.5:1, selected text >=4.5:1, focus >=3:1
+ok 121 - theme blue: white button labels >=4.5:1, selected text >=4.5:1, focus >=3:1
+  ---
+  duration_ms: 0.64164
+  type: 'test'
+  ...
+# Subtest: theme teal: white button labels >=4.5:1, selected text >=4.5:1, focus >=3:1
+ok 122 - theme teal: white button labels >=4.5:1, selected text >=4.5:1, focus >=3:1
+  ---
+  duration_ms: 0.087902
+  type: 'test'
+  ...
+# Subtest: theme violet: white button labels >=4.5:1, selected text >=4.5:1, focus >=3:1
+ok 123 - theme violet: white button labels >=4.5:1, selected text >=4.5:1, focus >=3:1
+  ---
+  duration_ms: 0.128124
+  type: 'test'
+  ...
+# Subtest: theme ruby: white button labels >=4.5:1, selected text >=4.5:1, focus >=3:1
+ok 124 - theme ruby: white button labels >=4.5:1, selected text >=4.5:1, focus >=3:1
+  ---
+  duration_ms: 0.10717
+  type: 'test'
+  ...
+# Subtest: theme bronze: white button labels >=4.5:1, selected text >=4.5:1, focus >=3:1
+ok 125 - theme bronze: white button labels >=4.5:1, selected text >=4.5:1, focus >=3:1
+  ---
+  duration_ms: 0.109952
+  type: 'test'
+  ...
+# Subtest: theme slate: white button labels >=4.5:1, selected text >=4.5:1, focus >=3:1
+ok 126 - theme slate: white button labels >=4.5:1, selected text >=4.5:1, focus >=3:1
+  ---
+  duration_ms: 0.080973
+  type: 'test'
+  ...
+# Subtest: friendly Excel long labels contribute to row height even when values are empty
+ok 127 - friendly Excel long labels contribute to row height even when values are empty
+  ---
+  duration_ms: 2.976805
+  type: 'test'
+  ...
+1..127
+# tests 127
+# suites 0
+# pass 127
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1487.115141
+# start of coverage report
+# --------------------------------------------------------------------------------
+# file                  | line % | branch % | funcs % | uncovered lines
+# --------------------------------------------------------------------------------
+# extension             |        |          |         | 
+#  domain               |        |          |         | 
+#   model.js            | 100.00 |    79.41 |   85.19 | 
+#   templates.js        | 100.00 |    96.15 |  100.00 | 
+#  infra                |        |          |         | 
+#   storage-core.js     | 100.00 |    86.36 |  100.00 | 
+#   vault.js            | 100.00 |    81.82 |  100.00 | 
+#   workbook-v2.js      | 100.00 |    90.34 |  100.00 | 
+#   xlsx.js             |  54.20 |    78.87 |   52.63 | 37-40 42-60 63-83 116-131
+#   zip.js              | 100.00 |    81.16 |  100.00 | 
+#  shared               |        |          |         | 
+#   design-tokens.js    | 100.00 |   100.00 |  100.00 | 
+#  ui                   |        |          |         | 
+#   theme.js            | 100.00 |    85.71 |   40.00 | 
+# tests                 |        |          |         | 
+#  unit                 |        |          |         | 
+#   background.test.mjs | 100.00 |   100.00 |   91.67 | 
+#   core.test.mjs       | 100.00 |    99.08 |  100.00 | 
+#   refinement.test.mjs | 100.00 |   100.00 |  100.00 | 
+# --------------------------------------------------------------------------------
+# all files             |  91.07 |    89.85 |   94.03 | 
+# --------------------------------------------------------------------------------
+# end of coverage report

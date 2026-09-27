@@ -1,0 +1,59 @@
+PASS manager renders seeded profile with labeled controls
+PASS autosave preserves raw Unicode and surrounding spaces
+PASS custom module and custom grouped multiline field can be created and edited
+PASS module rename preserves its stable identity
+PASS duplicate entry keeps content and assigns independent IDs
+PASS entry collapse is animated and removes hidden fields from keyboard navigation
+PASS global search traverses modules and entries
+PASS sensitive values are masked, excluded from search, and revealed only after consent
+PASS long sidebar preview has access to exact full text
+PASS profile markup is displayed as text without creating HTML or executing scripts
+PASS canceling an import leaves persisted data untouched
+PASS confirmed JSON import replaces only after preview and checkpoints prior data
+PASS malformed JSON does not partially change current data
+PASS oversized file is rejected before parsing
+PASS real browser XLSX writer and parser preserve IDs, strings, CRLF, XML text and escape-like literals
+PASS independent artifact_tool load-edit-save XLSX imports with all 230 fields
+PASS XLSX parser rejects formula workbook without changing current profile
+PASS XLSX parser rejects number workbook without changing current profile
+PASS XLSX parser rejects entity workbook without changing current profile
+PASS XLSX parser rejects macro workbook without changing current profile
+PASS XLSX parser rejects path workbook without changing current profile
+PASS backup passphrase mismatch blocks export
+PASS concurrent revision conflict retains user draft and allows exporting it
+PASS explicit permanent erase clears profile and local history
+PASS sidebar layout has no horizontal overflow at 320px
+PASS sidebar layout has no horizontal overflow at 360px
+PASS sidebar layout has no horizontal overflow at 420px
+PASS sidebar layout has no horizontal overflow at 600px
+PASS sidebar layout has no horizontal overflow at 800px
+PASS manager layout has no horizontal overflow at 360px
+PASS manager layout has no horizontal overflow at 768px
+PASS manager layout has no horizontal overflow at 1440px
+PASS native setter updates controlled-input value tracker fixture (not a React library test)
+PASS native text field fills exact value and never submits the form
+PASS textarea preserves symbols and line structure; browser line endings normalize to LF
+PASS native select matches an exact option label
+PASS ambiguous select labels do not guess or overwrite
+PASS maxlength overflow is rejected without truncation or mutation
+PASS date formatting that would be changed by the control is rejected
+PASS canonical native date input accepted
+PASS unsafe or unsupported control is not a fill target: #password
+PASS unsafe or unsupported control is not a fill target: #upload
+PASS unsafe or unsupported control is not a fill target: #readonly
+PASS unsafe or unsupported control is not a fill target: #disabled
+PASS unsafe or unsupported control is not a fill target: #hidden
+PASS unsafe or unsupported control is not a fill target: #rich
+PASS detached form target cannot receive a stale fill
+PASS wrong focus token is rejected before changing the field
+PASS canceled beforeinput aborts the write
+PASS last fill can be undone without submitting
+PASS undo refuses to overwrite a later user edit
+PASS simple contenteditable preserves multiline literal text and supports undo
+PASS open shadow-root native input can be selected and filled
+PASS framework replacement/reset is reported as failure, not claimed success
+PASS sidebar click routes one field to a separate real DOM and supports undo (Chrome transport mocked)
+PASS controls inherited-disabled through a fieldset are rejected
+PASS focus change inside the site rejects the prior target token
+PASS normal app edit flow initiates no HTTP or HTTPS requests
+{"passed": 58, "failed": 0, "total": 58}

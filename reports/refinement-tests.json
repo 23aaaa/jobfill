@@ -1,0 +1,296 @@
+{
+  "product": "小师弟求职",
+  "version": "1.1.0-rc.1",
+  "source_sha256": "ba1face72fbb93d1ebf462c94cbcbd065ea115f5cbcda7ba0ec7d21ce0c0a7f7",
+  "generated_at": "2026-09-23T09:01:47Z",
+  "browser": "144.0.7559.96",
+  "counts": {
+    "total": 32,
+    "passed": 32,
+    "failed": 0
+  },
+  "scope": "Real UI/DOM with explicit origin storage, Chrome transport, clipboard and download shims; no native or real-company claims. OOXML edits are adversarial fixtures, not Excel/WPS UI interaction.",
+  "results": [
+    {
+      "name": "theme blue: live colors, selected state, stored preference, profile unchanged",
+      "status": "passed",
+      "scope": "ui-refinement-mocked-storage",
+      "seconds": 1.67
+    },
+    {
+      "name": "theme teal: live colors, selected state, stored preference, profile unchanged",
+      "status": "passed",
+      "scope": "ui-refinement-mocked-storage",
+      "seconds": 1.232
+    },
+    {
+      "name": "theme violet: live colors, selected state, stored preference, profile unchanged",
+      "status": "passed",
+      "scope": "ui-refinement-mocked-storage",
+      "seconds": 0.995
+    },
+    {
+      "name": "theme ruby: live colors, selected state, stored preference, profile unchanged",
+      "status": "passed",
+      "scope": "ui-refinement-mocked-storage",
+      "seconds": 1.136
+    },
+    {
+      "name": "theme bronze: live colors, selected state, stored preference, profile unchanged",
+      "status": "passed",
+      "scope": "ui-refinement-mocked-storage",
+      "seconds": 0.885
+    },
+    {
+      "name": "theme slate: live colors, selected state, stored preference, profile unchanged",
+      "status": "passed",
+      "scope": "ui-refinement-mocked-storage",
+      "seconds": 1.102
+    },
+    {
+      "name": "theme persists on a fresh app boot with saved preference",
+      "status": "passed",
+      "scope": "ui-refinement-mocked-storage",
+      "seconds": 1.546
+    },
+    {
+      "name": "malformed preferences fall back without modifying profile",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.867
+    },
+    {
+      "name": "one global search, Ctrl K focus and Escape restoration",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.844
+    },
+    {
+      "name": "global multi-term NFKC search and navigation restores selected module",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.816
+    },
+    {
+      "name": "IME composition does not run half-composed searches",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.996
+    },
+    {
+      "name": "global search never exposes secret values, labels remain findable",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.887
+    },
+    {
+      "name": "rare empty-field and help actions remain available from settings",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 1.074
+    },
+    {
+      "name": "layout panel 320px: viewport, 24px targets and collapsible nav",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.899
+    },
+    {
+      "name": "layout panel 360px: viewport, 24px targets and collapsible nav",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 1.04
+    },
+    {
+      "name": "layout panel 420px: viewport, 24px targets and collapsible nav",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.99
+    },
+    {
+      "name": "layout panel 600px: viewport, 24px targets and collapsible nav",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 1.099
+    },
+    {
+      "name": "layout manager 360px: viewport, 24px targets and collapsible nav",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 1.075
+    },
+    {
+      "name": "layout manager 768px: viewport, 24px targets and collapsible nav",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 1.049
+    },
+    {
+      "name": "layout manager 1440px: viewport, 24px targets and collapsible nav",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 1.038
+    },
+    {
+      "name": "120-character labels and 30k text stay bounded with full text accessible",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.795
+    },
+    {
+      "name": "large root text does not block editing or introduce page overflow (not native browser zoom)",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 1.31
+    },
+    {
+      "name": "unchanged target polling retains keyboard focus",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 2.367
+    },
+    {
+      "name": "field settings hidden visually remain keyboard reachable",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.627
+    },
+    {
+      "name": "original v1 workbook remains fully importable after format upgrade",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 1.024
+    },
+    {
+      "name": "user Excel has three visible columns, hidden structure, text cells and freeze pane",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 0.895
+    },
+    {
+      "name": "edited worksheet tab and visible cell import with identities intact",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 1.292
+    },
+    {
+      "name": "malformed human worksheet does not partially overwrite profile",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 1.32
+    },
+    {
+      "name": "copied Excel record block becomes an independent entry without user-managed IDs",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 1.463
+    },
+    {
+      "name": "global search finds one record among 5000 fields without freezing the UI",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 1.471
+    },
+    {
+      "name": "broad search reveals all 450 matches in bounded batches without silent truncation",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 2.109
+    },
+    {
+      "name": "work-experience compact layout renders three independent records",
+      "status": "passed",
+      "scope": "browser-dom",
+      "seconds": 1.782
+    }
+  ],
+  "metrics": [
+    {
+      "view": "panel",
+      "width": 320,
+      "height": 900,
+      "list": {
+        "x": 64,
+        "y": 123.1875,
+        "width": 256,
+        "height": 752.8125
+      },
+      "area_ratio": 0.6692
+    },
+    {
+      "view": "panel",
+      "width": 360,
+      "height": 900,
+      "list": {
+        "x": 64,
+        "y": 123.1875,
+        "width": 296,
+        "height": 752.8125
+      },
+      "area_ratio": 0.6878
+    },
+    {
+      "view": "panel",
+      "width": 420,
+      "height": 900,
+      "list": {
+        "x": 78,
+        "y": 123.1875,
+        "width": 342,
+        "height": 752.8125
+      },
+      "area_ratio": 0.6811
+    },
+    {
+      "view": "panel",
+      "width": 600,
+      "height": 900,
+      "list": {
+        "x": 78,
+        "y": 123.1875,
+        "width": 522,
+        "height": 752.8125
+      },
+      "area_ratio": 0.7277
+    },
+    {
+      "view": "manager",
+      "width": 360,
+      "height": 900,
+      "list": {
+        "x": 78,
+        "y": 120.1875,
+        "width": 282,
+        "height": 755.8125
+      },
+      "area_ratio": 0.6578
+    },
+    {
+      "view": "manager",
+      "width": 768,
+      "height": 900,
+      "list": {
+        "x": 168,
+        "y": 85,
+        "width": 600,
+        "height": 791
+      },
+      "area_ratio": 0.6866
+    },
+    {
+      "view": "manager",
+      "width": 1440,
+      "height": 900,
+      "list": {
+        "x": 168,
+        "y": 85,
+        "width": 1272,
+        "height": 791
+      },
+      "area_ratio": 0.7764
+    },
+    {
+      "5000_field_search_seconds": 0.111
+    }
+  ]
+}

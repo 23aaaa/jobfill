@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "小师弟求职",
+  "version": "1.1.0",
+  "minimum_chrome_version": "116",
+  "description": "整理一份求职资料，在招聘网页按项填写。支持自定义分类、Excel 导入导出和本地备份，不自动提交。",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "sidePanel",
+    "clipboardWrite"
+  ],
+  "action": {
+    "default_title": "打开小师弟求职 · 连接当前页面",
+    "default_icon": {
+      "16": "icons/16.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "options_ui": {
+    "page": "manager.html",
+    "open_in_tab": true
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+Y",
+        "mac": "Alt+Shift+Y"
+      },
+      "description": "打开小师弟求职并连接当前页面"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  },
+  "version_name": "1.1.0-rc.1"
+}

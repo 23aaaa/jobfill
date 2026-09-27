@@ -1,0 +1,2129 @@
+{
+  "version": 1,
+  "id": "9b28efc6-cdc2-4c21-833a-d5900c29b010",
+  "name": "完整求职资料模板",
+  "revision": 0,
+  "updatedAt": "2026-09-23T05:43:00.644Z",
+  "modules": [
+    {
+      "id": "fee2ae51-7baf-4357-9a51-1e816475b332",
+      "name": "基本信息",
+      "tier": "常用",
+      "templateKey": "basic",
+      "entries": [
+        {
+          "id": "82c0e91a-0ea2-47fd-8317-a278dd769395",
+          "title": "个人资料",
+          "fields": [
+            {
+              "id": "876a3c99-4cfd-4d5e-911d-09833dd853f9",
+              "label": "姓名",
+              "group": "常用资料",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "47673023-7c01-4017-bca1-52a40d06e923",
+              "label": "英文名",
+              "group": "常用资料",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "73dbb869-54ee-45fa-a74f-0e374bfd5044",
+              "label": "性别",
+              "group": "常用资料",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "204a0ba1-97ce-4712-9b53-07e66970d12c",
+              "label": "手机号码",
+              "group": "常用资料",
+              "type": "tel",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "b251c6ac-fb23-47cb-bacf-b8d25e4c5d2f",
+              "label": "电子邮箱",
+              "group": "常用资料",
+              "type": "email",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "043a5f34-04db-4c04-a9fa-85a594f35c76",
+              "label": "当前所在城市",
+              "group": "常用资料",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "87f8c78f-ec55-4781-9c9b-f84cb55e5c61",
+              "label": "个人网站",
+              "group": "常用资料",
+              "type": "url",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "8f83cb49-c5ee-4cb9-82be-82753230d701",
+              "label": "作品集链接",
+              "group": "常用资料",
+              "type": "url",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "60031c0e-5efa-407a-945e-885a3157ca2c",
+              "label": "出生日期",
+              "group": "证件与个人状态",
+              "type": "date",
+              "value": "",
+              "sensitive": true
+            },
+            {
+              "id": "5a60fc4d-8d06-4d53-b4b7-cd8f3d6eaa5f",
+              "label": "国籍 / 地区",
+              "group": "证件与个人状态",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "2ae9fc51-9e2f-4edf-80a8-7ed20215a702",
+              "label": "民族",
+              "group": "证件与个人状态",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "9e7d1bb8-8043-4c3f-9ebc-e5fa240ce96c",
+              "label": "政治面貌",
+              "group": "证件与个人状态",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "b0783809-541f-4865-8ac7-78b30412dc87",
+              "label": "籍贯",
+              "group": "证件与个人状态",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "b7715d91-1331-4682-9fc0-ce4826b6e547",
+              "label": "户籍所在地",
+              "group": "证件与个人状态",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "bc2b794f-b773-41c5-b9ef-b6a1841109e9",
+              "label": "生源地",
+              "group": "证件与个人状态",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "2347def3-e956-40de-a230-b805dec5d9e2",
+              "label": "证件类型",
+              "group": "证件与个人状态",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "8b8edc52-1c60-4d21-bcea-84b53db341b6",
+              "label": "证件号码",
+              "group": "证件与个人状态",
+              "type": "text",
+              "value": "",
+              "sensitive": true
+            },
+            {
+              "id": "5fc9c426-6016-40e0-a02b-f7a3a89b295e",
+              "label": "婚姻状况",
+              "group": "证件与个人状态",
+              "type": "text",
+              "value": "",
+              "sensitive": true
+            },
+            {
+              "id": "853a8e34-56d3-4fab-9416-aa98c1cd727e",
+              "label": "通讯地址",
+              "group": "地址与其他",
+              "type": "multiline",
+              "value": "",
+              "sensitive": true
+            },
+            {
+              "id": "ad99f53c-1a4b-4382-b87d-c5fe91334319",
+              "label": "邮政编码",
+              "group": "地址与其他",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "484f6bd0-a85a-42a8-98ec-d0c0fa233f1a",
+              "label": "微信号",
+              "group": "地址与其他",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "cc20bb6b-1526-4d47-81fb-0f54b3951b34",
+              "label": "备用电话",
+              "group": "地址与其他",
+              "type": "tel",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "0c8e2b1c-d511-453c-8f4f-162c4264ac6b",
+              "label": "个人照片文件名（仅备注）",
+              "group": "地址与其他",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "36f855e9-dcf3-4b15-9762-9929315765c2",
+              "label": "简历附件文件名（仅备注）",
+              "group": "地址与其他",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "54a28cda-69ce-445a-a8ba-624db61bfd9b",
+      "name": "求职意向",
+      "tier": "常用",
+      "templateKey": "intention",
+      "entries": [
+        {
+          "id": "b99ce6da-f547-491e-bec7-941b89282911",
+          "title": "本次求职",
+          "fields": [
+            {
+              "id": "b5eec46c-014f-4798-8d53-93237833a7cb",
+              "label": "目标岗位",
+              "group": "申请偏好",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "62376116-c016-4615-a28f-3211f4d03e40",
+              "label": "目标职类",
+              "group": "申请偏好",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "927a45cc-fe1d-40f9-99eb-6ebd063980a6",
+              "label": "意向行业",
+              "group": "申请偏好",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "8311f464-0de5-4fbe-a117-c34420b86243",
+              "label": "意向公司",
+              "group": "申请偏好",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "acb64b56-4eb3-4bc1-a8d2-9c9d945acf4f",
+              "label": "意向城市",
+              "group": "申请偏好",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "5b82d60c-1ed0-40f0-b0e6-294e72e4c014",
+              "label": "求职类型（校招 / 社招 / 实习）",
+              "group": "申请偏好",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "e487dd53-2727-4bfb-9b05-06d53507508b",
+              "label": "工作方式（现场 / 混合 / 远程）",
+              "group": "申请偏好",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "fcc9e389-4ea3-48b2-9484-cecc2f71561c",
+              "label": "最早到岗日期",
+              "group": "到岗安排",
+              "type": "date",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "2da46956-09a9-4d1c-bf10-639c73dc349c",
+              "label": "每周可实习天数",
+              "group": "到岗安排",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "35818336-8edb-4184-b23e-30eb46ff00a8",
+              "label": "可实习月数",
+              "group": "到岗安排",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "a721efe1-4d79-4dc9-9cb8-01c7af57c786",
+              "label": "预计毕业时间",
+              "group": "到岗安排",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "df21df46-44c1-4321-bd03-97ee8901ae0b",
+              "label": "期望薪资",
+              "group": "到岗安排",
+              "type": "text",
+              "value": "",
+              "sensitive": true
+            },
+            {
+              "id": "bdfb5714-5e4c-4105-952a-db102b945b19",
+              "label": "是否接受调剂",
+              "group": "到岗安排",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "84b0a87e-f595-40d4-93ac-68c3cfee70b7",
+              "label": "是否接受出差",
+              "group": "到岗安排",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "5eda5930-0e73-4426-8da8-ff11141622cf",
+              "label": "工作许可 / 签证状态",
+              "group": "到岗安排",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8ac7fa05-2548-41f5-aefd-179743f207b5",
+      "name": "教育经历",
+      "tier": "常用",
+      "templateKey": "education",
+      "entries": [
+        {
+          "id": "b4df964d-851a-4203-a2d5-23254930d783",
+          "title": "教育经历 1",
+          "fields": [
+            {
+              "id": "d17de03e-2ff4-4f1c-a51a-693207b5d1e6",
+              "label": "学校名称",
+              "group": "学历信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "b6e138f5-c170-4b88-ba03-a0c68eccd9d6",
+              "label": "学院",
+              "group": "学历信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "d0af3154-d573-4b0d-9297-6dba8a392d82",
+              "label": "专业名称",
+              "group": "学历信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "50a7e338-c207-4bd5-ae43-e18a77c0d594",
+              "label": "学历",
+              "group": "学历信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "96c5fa61-637d-47a6-82c7-894dd0e33451",
+              "label": "学位",
+              "group": "学历信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "8ad40f01-2e11-4241-8f56-62b121bfeadb",
+              "label": "培养方式",
+              "group": "学历信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "12506f9f-61cd-476e-a1cb-28b5f3687ccf",
+              "label": "学习形式",
+              "group": "学历信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "78942d73-70ba-4d14-8f00-0d71b04d3a94",
+              "label": "学校所在城市",
+              "group": "学历信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "ed7885f4-df35-4e81-9669-f0df7a2281fe",
+              "label": "入学时间",
+              "group": "学历信息",
+              "type": "month",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "2ed0b707-3f53-460b-9b4f-d52ff71b430e",
+              "label": "毕业时间",
+              "group": "学历信息",
+              "type": "month",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "02bdbb15-fd21-41bb-9ae7-2c2cdb5c3bee",
+              "label": "GPA",
+              "group": "学业表现",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "0c9647a1-f304-4309-bc4d-a94449ba0932",
+              "label": "GPA 满分",
+              "group": "学业表现",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "8df2e8ae-4880-4c7d-90f2-fcc3193e3c05",
+              "label": "平均成绩",
+              "group": "学业表现",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "647f8803-27e7-41ce-aa1d-99787a8a73c4",
+              "label": "专业排名",
+              "group": "学业表现",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "4f1c455c-04c2-4bf1-8e71-2f5b339672da",
+              "label": "专业总人数",
+              "group": "学业表现",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "76051889-b972-4483-8223-807c1477d8eb",
+              "label": "排名百分比",
+              "group": "学业表现",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "f7f73681-7546-4726-8324-50138a743cda",
+              "label": "主修课程",
+              "group": "学业表现",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "3148e3e7-6c67-4ff1-ac6c-e21c186c5ebe",
+              "label": "研究方向",
+              "group": "学业表现",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "6b3ca11c-432e-475f-9d3b-55f3984e7a12",
+              "label": "导师姓名",
+              "group": "学业表现",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "dd6c553e-972c-4bf7-9d42-3c9f681f4929",
+              "label": "班级",
+              "group": "学业表现",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "21c24e58-4c12-474a-89e1-e05616c495b9",
+              "label": "毕业论文 / 毕业设计",
+              "group": "补充资料",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "e89fea72-1bfb-4d82-9260-e467ed136aa8",
+              "label": "学习经历说明",
+              "group": "补充资料",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "fd8911bf-5fab-445d-8aba-8c3cdb8c7056",
+              "label": "第二学位 / 辅修",
+              "group": "补充资料",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "470cd57d-32f8-41c7-9b5f-29f130bcdaee",
+              "label": "学历认证状态",
+              "group": "补充资料",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7b90aae7-7c68-463d-a5b9-1082e6354aff",
+      "name": "工作经历",
+      "tier": "常用",
+      "templateKey": "work",
+      "entries": [
+        {
+          "id": "80d9d891-e468-4d62-a100-df1cb4807fb3",
+          "title": "工作经历 1",
+          "fields": [
+            {
+              "id": "4507353e-53f8-4d4e-9e1c-5a98d13f3da8",
+              "label": "公司名称",
+              "group": "任职信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "c1cdafa3-78bb-41a7-bdfa-04b6d5c526cb",
+              "label": "所属行业",
+              "group": "任职信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "4013b105-99c8-4b5f-9db2-d90ea924c15d",
+              "label": "公司性质",
+              "group": "任职信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "3a36067c-712c-409e-a33b-902175947e34",
+              "label": "公司规模",
+              "group": "任职信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "7baa7c38-f8c1-4644-94ec-01b94d9db8ef",
+              "label": "部门名称",
+              "group": "任职信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "870d4654-656f-441d-817a-f4da62146831",
+              "label": "岗位名称",
+              "group": "任职信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "9475e3d3-8e84-45a6-9c73-ce5ac6eb6b87",
+              "label": "工作性质",
+              "group": "任职信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "6bc7c5c0-3e43-45b2-9452-945a38f1a9a7",
+              "label": "工作城市",
+              "group": "任职信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "a54d27cd-24b4-46e5-89ed-9b2526677fa2",
+              "label": "开始时间",
+              "group": "任职信息",
+              "type": "month",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "376c6d5d-07c6-4331-9a53-1e787fe7b5d8",
+              "label": "结束时间",
+              "group": "任职信息",
+              "type": "month",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "95d18c30-d2c3-41fa-9916-c9faef8cdeba",
+              "label": "是否至今",
+              "group": "任职信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "35bbc071-176f-405b-a121-204230b68753",
+              "label": "岗位职责",
+              "group": "工作内容",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "008f5755-70e8-4732-88e0-42ca67703ee7",
+              "label": "重点业绩 / 量化结果",
+              "group": "工作内容",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "9d728813-a011-4e19-a83b-c402ab41ef4c",
+              "label": "技术栈 / 方法工具",
+              "group": "工作内容",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "ab98bdc8-2dfe-46e1-a85c-9699d3fd82a1",
+              "label": "职级",
+              "group": "补充信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "c7ff8292-67c0-451d-82ed-93b7ed32831e",
+              "label": "离职原因",
+              "group": "补充信息",
+              "type": "multiline",
+              "value": "",
+              "sensitive": true
+            },
+            {
+              "id": "91dac805-42f6-487d-aa8c-5dd42c07abe5",
+              "label": "薪资信息",
+              "group": "补充信息",
+              "type": "text",
+              "value": "",
+              "sensitive": true
+            },
+            {
+              "id": "a7adb450-d7b4-43df-b9b2-6b95b37aeeaa",
+              "label": "汇报对象",
+              "group": "补充信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "1afae60c-73fe-4c52-bd54-1942e2b84cbd",
+              "label": "证明人姓名",
+              "group": "补充信息",
+              "type": "text",
+              "value": "",
+              "sensitive": true
+            },
+            {
+              "id": "7a802226-9922-4c93-83c9-6e5ba038c55e",
+              "label": "证明人电话",
+              "group": "补充信息",
+              "type": "tel",
+              "value": "",
+              "sensitive": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2122da9c-70e7-4448-aa3f-8d76243a5294",
+      "name": "实习经历",
+      "tier": "常用",
+      "templateKey": "internship",
+      "entries": [
+        {
+          "id": "f8798175-cca7-40ae-9235-f00deb246a9f",
+          "title": "实习经历 1",
+          "fields": [
+            {
+              "id": "e8fcc70f-ea09-4957-9f37-c9d0f4ee4ac3",
+              "label": "公司名称",
+              "group": "实习信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "020092ee-74ac-4126-97ba-6703dfc7fae7",
+              "label": "部门名称",
+              "group": "实习信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "d9d24808-05bd-42cd-a141-b0c98c778d3d",
+              "label": "岗位名称",
+              "group": "实习信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "9b88b7bf-0bf2-4d62-8b81-616ee691ab09",
+              "label": "工作城市",
+              "group": "实习信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "f21888ee-5cde-467b-ac4b-416843703f1d",
+              "label": "实习类型",
+              "group": "实习信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "a6a633a7-80b6-4402-af0d-120de8c871c4",
+              "label": "开始时间",
+              "group": "实习信息",
+              "type": "month",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "a1f4761b-d696-477d-a095-6671af7a85e9",
+              "label": "结束时间",
+              "group": "实习信息",
+              "type": "month",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "11260815-7ae3-46dd-8da2-684f7d061c7f",
+              "label": "是否至今",
+              "group": "实习信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "32d212a4-ff78-488c-b42f-ef986399bd4e",
+              "label": "每周出勤天数",
+              "group": "实习信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "fc6d4af2-3af8-4dab-8079-fa9f47d1dfe5",
+              "label": "实习职责",
+              "group": "实习内容",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "2dbeffc9-5e22-4482-b936-9c55bc2391a3",
+              "label": "成果与贡献",
+              "group": "实习内容",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "6dbb3c47-b56b-4987-9d56-eb3f5dfc6b56",
+              "label": "技术栈 / 使用工具",
+              "group": "实习内容",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "d03c2591-27f8-44e9-881c-a41082a689d2",
+              "label": "指导人",
+              "group": "补充信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "70b35cbc-a0c3-499c-9346-966392c7b953",
+              "label": "证明人电话",
+              "group": "补充信息",
+              "type": "tel",
+              "value": "",
+              "sensitive": true
+            },
+            {
+              "id": "d933d468-0a40-49c3-a0b4-683ba9e2709a",
+              "label": "转正情况",
+              "group": "补充信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "00d09c7f-1ef8-43bf-9e3e-1ad9b44c1634",
+              "label": "离职原因",
+              "group": "补充信息",
+              "type": "multiline",
+              "value": "",
+              "sensitive": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5e97ffa4-df1c-4b85-9f54-858588586900",
+      "name": "项目经历",
+      "tier": "常用",
+      "templateKey": "projects",
+      "entries": [
+        {
+          "id": "ecf456ce-3c6d-4e57-958b-c7a93aad2745",
+          "title": "项目经历 1",
+          "fields": [
+            {
+              "id": "c3e8c2ae-5822-4b26-a7ca-d09a38a03f6d",
+              "label": "项目名称",
+              "group": "项目概况",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "6339e398-66e9-4a0d-9189-8c408a86c539",
+              "label": "项目类型",
+              "group": "项目概况",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "4c795a1f-78ec-4955-b133-3d9a96105446",
+              "label": "所属组织",
+              "group": "项目概况",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "71b5796f-a78a-4a34-b6e6-4f4beb20590e",
+              "label": "担任角色",
+              "group": "项目概况",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "16aa84fc-609b-4e6a-be1b-2e898625e806",
+              "label": "开始时间",
+              "group": "项目概况",
+              "type": "month",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "21f37657-914f-4dae-bb16-d32ef2c5b604",
+              "label": "结束时间",
+              "group": "项目概况",
+              "type": "month",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "e09e31d1-204d-4280-9da6-01d420b941be",
+              "label": "是否至今",
+              "group": "项目概况",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "bc6c50fc-ea8e-4776-8847-961409f56020",
+              "label": "团队规模",
+              "group": "项目概况",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "7e836dc3-a402-4804-a1c2-449cba47dc7a",
+              "label": "项目链接",
+              "group": "项目概况",
+              "type": "url",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "9f729bb2-d8ac-43d5-ae3c-a15bb382901d",
+              "label": "代码仓库",
+              "group": "项目概况",
+              "type": "url",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "a2c53904-69cd-4031-af5e-d2cb1f854ca5",
+              "label": "项目背景 / 目标",
+              "group": "项目内容",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "a79f812c-a926-4d1e-909d-06afbc8e5231",
+              "label": "个人职责",
+              "group": "项目内容",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "37246be1-8d3b-44e5-82a5-3f39b568120a",
+              "label": "实施过程 / 难点",
+              "group": "项目内容",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "9c853a46-6b53-4c78-bd37-35ec2698bb47",
+              "label": "项目成果 / 指标",
+              "group": "项目内容",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "9e43b7b6-4505-4350-9e1d-bfe25479d814",
+              "label": "技术栈 / 工具",
+              "group": "项目内容",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16f03b06-9c57-4d5c-a97d-36e209add0a1",
+      "name": "校园与学生工作",
+      "tier": "扩展",
+      "templateKey": "campus",
+      "entries": [
+        {
+          "id": "b9bb1db1-9245-4e63-9284-d1e9e957f20f",
+          "title": "校园与学生工作 1",
+          "fields": [
+            {
+              "id": "86bef596-d96a-46bf-84e3-a9c37823b06a",
+              "label": "组织 / 社团名称",
+              "group": "组织信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "c1054d78-d644-48a6-8a6e-cf330b1b1068",
+              "label": "担任职务",
+              "group": "组织信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "6f9877cd-38e8-4385-bbbd-b200f1132564",
+              "label": "所属学校",
+              "group": "组织信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "52fa9df7-aed7-4725-9bc3-afb8e2e5ad95",
+              "label": "开始时间",
+              "group": "组织信息",
+              "type": "month",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "df57c977-01d0-4b4e-b29d-8102849ec3ba",
+              "label": "结束时间",
+              "group": "组织信息",
+              "type": "month",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "a24adbab-f173-42b6-90f8-0bb0f49cbda1",
+              "label": "是否至今",
+              "group": "组织信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "835feb0b-086b-4b30-bc72-b70a0210691f",
+              "label": "职责与工作内容",
+              "group": "职责成果",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "3da6b356-b02e-4e6b-bb29-c9d39e35247e",
+              "label": "成果与影响",
+              "group": "职责成果",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "19dfd838-ad5e-46a4-ba22-808fbb475d76",
+      "name": "奖项与荣誉",
+      "tier": "常用",
+      "templateKey": "awards",
+      "entries": [
+        {
+          "id": "9590ea16-5d6b-4397-9630-82fa85a311c7",
+          "title": "奖项与荣誉 1",
+          "fields": [
+            {
+              "id": "5b5916ac-7488-4b19-b962-bea3b33792dc",
+              "label": "奖项名称",
+              "group": "奖项信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "7a8adcd8-be08-4652-ab23-a9145460ffd1",
+              "label": "奖项类别",
+              "group": "奖项信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "e426c444-498c-4476-bb23-6e0c04283ac8",
+              "label": "获奖等级",
+              "group": "奖项信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "447171b1-b61a-40c5-bc81-89421390fa95",
+              "label": "奖项级别",
+              "group": "奖项信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "98b5009c-5e4e-4755-b035-27dbf8727665",
+              "label": "颁发单位",
+              "group": "奖项信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "d3213372-a908-4ff9-9b69-dfe3a1445e43",
+              "label": "获奖时间",
+              "group": "奖项信息",
+              "type": "month",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "97d6ec83-b014-41ab-9a42-cdb51b227427",
+              "label": "个人 / 团队",
+              "group": "奖项信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "9e58521a-bd46-449b-9dbf-fadd610d7418",
+              "label": "参赛人数 / 排名",
+              "group": "奖项信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "6f44a511-8264-48e0-aa85-7f4523b1b34e",
+              "label": "奖项描述",
+              "group": "补充说明",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "da6311fb-f3b5-40bd-8a95-32d7f0246339",
+              "label": "证明链接",
+              "group": "补充说明",
+              "type": "url",
+              "value": "",
+              "sensitive": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "768b68ce-3258-4597-a592-6865609047ea",
+      "name": "专业技能",
+      "tier": "扩展",
+      "templateKey": "skills",
+      "entries": [
+        {
+          "id": "97cf65d8-bffc-443f-a218-93def9b3d09d",
+          "title": "专业技能 1",
+          "fields": [
+            {
+              "id": "21b697ec-5586-4e5b-9247-a70a7e39cd63",
+              "label": "技能名称",
+              "group": "技能信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "d69ec94b-9c8f-48d7-ad75-5e3656807d60",
+              "label": "技能类别",
+              "group": "技能信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "31ebef1e-104a-4c7b-b15c-aadcc325194e",
+              "label": "掌握程度",
+              "group": "技能信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "73e7f1f8-ab66-45da-80f9-ca40b4f5cec0",
+              "label": "使用年限",
+              "group": "技能信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "788fd7a5-d070-4248-a4f4-bc8f1bd973ae",
+              "label": "应用场景 / 代表成果",
+              "group": "能力证据",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "3b3f6af2-6302-4ad5-ac60-452ed13ce56d",
+              "label": "证明链接",
+              "group": "能力证据",
+              "type": "url",
+              "value": "",
+              "sensitive": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7be0d4b6-5c19-48e5-b9a3-2d995124cb1c",
+      "name": "语言能力",
+      "tier": "扩展",
+      "templateKey": "languages",
+      "entries": [
+        {
+          "id": "d232c2db-44f5-4a32-aea9-491e8b16ca51",
+          "title": "语言能力 1",
+          "fields": [
+            {
+              "id": "58f3a988-9937-4945-af38-68c39c60789f",
+              "label": "语言",
+              "group": "语言与考试",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "a0af3698-e86b-43c3-925c-ad2aa566cd66",
+              "label": "听说读写水平",
+              "group": "语言与考试",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "e4f8b36c-b24e-4b93-bc0f-ea9e8768b47f",
+              "label": "考试 / 等级名称",
+              "group": "语言与考试",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "32d906a7-997d-4488-97ef-3353cfa58737",
+              "label": "总分",
+              "group": "语言与考试",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "6f3239a1-2813-4e9b-bded-e3f96b569e41",
+              "label": "听力成绩",
+              "group": "语言与考试",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "2c2976db-9537-4be8-8c28-acce4889d55e",
+              "label": "阅读成绩",
+              "group": "语言与考试",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "d6b16692-e137-44a5-87ee-24f64a154cff",
+              "label": "写作成绩",
+              "group": "语言与考试",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "ec3269f5-bf21-46d8-8347-12bf9e3f1703",
+              "label": "口语成绩",
+              "group": "语言与考试",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "ebae2fe1-ce54-447f-93e4-8ce7904caac0",
+              "label": "考试日期",
+              "group": "语言与考试",
+              "type": "date",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "9dc06e32-069c-45f0-ba05-9668f17a5170",
+              "label": "有效期至",
+              "group": "语言与考试",
+              "type": "date",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "5630569e-1a77-41dd-9784-939338652a7e",
+              "label": "实际使用场景",
+              "group": "说明",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a1afe65f-0bd9-4c04-a73d-9ab6f75468fc",
+      "name": "证书与资质",
+      "tier": "扩展",
+      "templateKey": "certificates",
+      "entries": [
+        {
+          "id": "65687541-36d7-46fc-a9b2-008055d42147",
+          "title": "证书与资质 1",
+          "fields": [
+            {
+              "id": "295438cc-89da-41c3-bf23-d317589a14f5",
+              "label": "证书名称",
+              "group": "证书信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "3d7d1c26-a1c8-49dd-a774-6bf05362c1e3",
+              "label": "等级",
+              "group": "证书信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "41b0c61c-fb89-4da2-9830-fcadd0a79123",
+              "label": "颁发机构",
+              "group": "证书信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "55c848f0-d708-4209-835f-f7b861da8618",
+              "label": "证书编号",
+              "group": "证书信息",
+              "type": "text",
+              "value": "",
+              "sensitive": true
+            },
+            {
+              "id": "5c83da13-4ee1-4917-9bfb-8b3781c1c086",
+              "label": "取得日期",
+              "group": "证书信息",
+              "type": "date",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "7f2a2c36-0465-4612-86a8-fd73e49e327b",
+              "label": "有效期至",
+              "group": "证书信息",
+              "type": "date",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "09d9580d-df09-4feb-a21c-33de7ea77e29",
+              "label": "证书说明",
+              "group": "补充说明",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "6055cd7b-1264-45fd-8f0f-0d7efaf569ce",
+              "label": "验证链接",
+              "group": "补充说明",
+              "type": "url",
+              "value": "",
+              "sensitive": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e0cd6ce0-6f6b-445f-ad6d-dac2766a5390",
+      "name": "科研经历",
+      "tier": "扩展",
+      "templateKey": "research",
+      "entries": [
+        {
+          "id": "eb4ff1b1-a091-4509-a5e4-bbf25cd0bea4",
+          "title": "科研经历 1",
+          "fields": [
+            {
+              "id": "03660764-576a-448c-9448-d4a67e09dd58",
+              "label": "课题名称",
+              "group": "课题信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "ed3c746b-8efc-4da9-9ce1-b7e3a251ab28",
+              "label": "研究机构",
+              "group": "课题信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "d39eb1a8-5be9-406d-a1ea-3de19511f879",
+              "label": "指导教师",
+              "group": "课题信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "2801f4f0-c384-41c4-bbdf-0ef0ef4b1fd0",
+              "label": "研究角色",
+              "group": "课题信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "5da08b9e-c655-46db-a750-ab092c0e748a",
+              "label": "开始时间",
+              "group": "课题信息",
+              "type": "month",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "2be3472f-33a1-489b-a072-1869f7625d64",
+              "label": "结束时间",
+              "group": "课题信息",
+              "type": "month",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "d249367b-2e4d-4e63-9159-47dd2f2bd15f",
+              "label": "研究问题",
+              "group": "研究内容",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "a7812601-155d-4358-81e7-67721ce1b8d8",
+              "label": "研究方法",
+              "group": "研究内容",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "904320cd-b8ea-436b-9f60-b2432c664049",
+              "label": "个人贡献",
+              "group": "研究内容",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "5d229bea-d790-4b1c-b70e-212d9f0aa74f",
+              "label": "成果与影响",
+              "group": "研究内容",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "826a5a72-d5d6-4b32-92b4-1b9da55312ca",
+      "name": "论文与专利",
+      "tier": "少用",
+      "templateKey": "publications",
+      "entries": [
+        {
+          "id": "1ecf4195-9434-4880-a774-0f826a6df1bf",
+          "title": "论文与专利 1",
+          "fields": [
+            {
+              "id": "a67b94ef-b09e-4c34-81d0-83fea3a851a9",
+              "label": "成果名称",
+              "group": "成果信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "8f5189d8-6ff6-40f3-834d-e0dd494e9959",
+              "label": "成果类型",
+              "group": "成果信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "081f9042-a7be-406d-821b-57f6e5182180",
+              "label": "作者 / 发明人排序",
+              "group": "成果信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "422a4575-5d8f-4710-9a1a-3f88c3d31ecd",
+              "label": "期刊 / 会议 / 专利机构",
+              "group": "成果信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "70a16ad7-e2aa-48c7-a261-0e194b599bef",
+              "label": "发表 / 授权状态",
+              "group": "成果信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "ab51524a-bad5-4aff-b44f-e95d9694a5a9",
+              "label": "发表 / 授权日期",
+              "group": "成果信息",
+              "type": "date",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "1bde6b65-3365-44e3-8ca8-8940780a1c3a",
+              "label": "DOI / 专利号",
+              "group": "成果信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "9b9a753c-5755-46c4-8adc-b225210ca339",
+              "label": "公开链接",
+              "group": "成果信息",
+              "type": "url",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "28172343-671c-49cf-a72a-5f5902106354",
+              "label": "摘要 / 内容",
+              "group": "成果介绍",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "ee3d4d4c-ad8b-45fe-8b17-8978deb472e8",
+              "label": "个人贡献",
+              "group": "成果介绍",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2e23d2d5-a865-44c5-9679-144f63da2b6a",
+      "name": "培训与进修",
+      "tier": "扩展",
+      "templateKey": "training",
+      "entries": [
+        {
+          "id": "41527b73-3f39-445e-b0be-58a9797cbc28",
+          "title": "培训与进修 1",
+          "fields": [
+            {
+              "id": "35496c99-77af-415a-a343-052848138403",
+              "label": "课程 / 项目名称",
+              "group": "培训信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "3ec94378-3dc8-4bc2-a309-37bfc1d26963",
+              "label": "培训机构",
+              "group": "培训信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "ae57ff42-a7cc-4473-bd8a-01206e5ab7d6",
+              "label": "培训地点",
+              "group": "培训信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "fee7bb0e-f2e8-4aeb-99f1-7c384a522b26",
+              "label": "开始时间",
+              "group": "培训信息",
+              "type": "month",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "11468e0c-e4f2-44c0-bc37-d5be60cb68ce",
+              "label": "结束时间",
+              "group": "培训信息",
+              "type": "month",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "8954e1ec-3167-45a3-9c22-e00d67d69d2d",
+              "label": "学习内容",
+              "group": "培训内容",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "17f8fc6a-3c88-460b-a13b-ddadf1072787",
+              "label": "考核与成果",
+              "group": "培训内容",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "264c2068-62b9-4be2-baac-a26d2c268143",
+      "name": "志愿与社会实践",
+      "tier": "扩展",
+      "templateKey": "volunteer",
+      "entries": [
+        {
+          "id": "47669df5-c7cf-475e-92a0-e43f0a9960f3",
+          "title": "志愿与社会实践 1",
+          "fields": [
+            {
+              "id": "e56590d5-6b85-4be9-b822-e6f7722afd0a",
+              "label": "活动名称",
+              "group": "实践信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "0d3ff090-22e7-44b1-9205-6708a31b1e80",
+              "label": "组织单位",
+              "group": "实践信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "907a347a-4b2b-42cb-a4e9-75d7319e78e4",
+              "label": "担任角色",
+              "group": "实践信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "734c8369-3338-48a1-a0d5-f5ffce25aa0d",
+              "label": "活动地点",
+              "group": "实践信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "70f59393-8137-4463-b2ff-ec84eacf5552",
+              "label": "开始时间",
+              "group": "实践信息",
+              "type": "month",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "73f53c4d-7096-4037-ad79-c45de4b8b4a4",
+              "label": "结束时间",
+              "group": "实践信息",
+              "type": "month",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "12b3287f-e2fb-48ab-8e22-eb7f08512cec",
+              "label": "服务时长",
+              "group": "实践信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "30bfe882-d08e-4363-af61-f60675a4c846",
+              "label": "职责与内容",
+              "group": "实践内容",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "af75c4e5-db23-4f48-9684-a3e0901c6ec7",
+              "label": "成果与影响",
+              "group": "实践内容",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1930061e-3985-41da-9199-d27e1d178795",
+      "name": "作品与链接",
+      "tier": "扩展",
+      "templateKey": "portfolio",
+      "entries": [
+        {
+          "id": "d0802167-56d4-4065-812e-de1c41911a8d",
+          "title": "作品与链接 1",
+          "fields": [
+            {
+              "id": "24eead7b-5609-4543-b0e1-a4c3c4970727",
+              "label": "作品名称",
+              "group": "作品信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "8f00e202-e975-465b-959b-676401a52ac2",
+              "label": "作品类别",
+              "group": "作品信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "d7c9e598-05c4-4cfb-bbd8-2b57653acbb0",
+              "label": "本人角色",
+              "group": "作品信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "eed5c83b-1a71-4936-9aaf-6ed67ecda222",
+              "label": "作品链接",
+              "group": "作品信息",
+              "type": "url",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "4f9dd27c-d709-48d3-a599-15b7a926d2c6",
+              "label": "附件文件名（仅备注）",
+              "group": "作品信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "445f982a-2dac-4189-87de-a1db19f753aa",
+              "label": "作品概述",
+              "group": "作品介绍",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "36afb12f-56cc-43aa-a254-3e10af218332",
+              "label": "个人贡献",
+              "group": "作品介绍",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "e4ca4f60-2d2a-4074-8f08-e0a3acb7ba0b",
+              "label": "访问密码（非账户密码）",
+              "group": "作品介绍",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ff4e55ac-ae86-4c94-b830-e4c839be54b7",
+      "name": "自我介绍与问答",
+      "tier": "常用",
+      "templateKey": "answers",
+      "entries": [
+        {
+          "id": "cc9ea2bb-1bf7-445f-8e9c-66ced0f67540",
+          "title": "通用版本",
+          "fields": [
+            {
+              "id": "969ec9ea-951f-495c-b326-52616b0274d7",
+              "label": "自我介绍",
+              "group": "常用回答",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "2efec4b4-c3ec-4e0a-a721-b3c33910cca3",
+              "label": "自我评价",
+              "group": "常用回答",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "c5e35711-3c6f-4169-a1a1-d1ec8f6fe327",
+              "label": "个人优势",
+              "group": "常用回答",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "bd5f27fb-005b-4f34-b8de-17b5d0d0d1a8",
+              "label": "待提升之处",
+              "group": "常用回答",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "2c17ed9a-8a2a-41f4-9ede-c3048d4b38b6",
+              "label": "申请动机",
+              "group": "常用回答",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "dc60df7a-cf24-479c-8fda-dec8c2547ac2",
+              "label": "职业规划",
+              "group": "常用回答",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "a828679b-ca97-4616-a694-448c394d443f",
+              "label": "兴趣爱好",
+              "group": "常用回答",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "392e9304-28e5-467a-80b2-7f92a01e3988",
+              "label": "最有成就感的一件事",
+              "group": "行为问题",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "b0a16bb7-f5a2-43b8-8e47-3bb9b32f9be3",
+              "label": "遇到的最大挑战",
+              "group": "行为问题",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "82725170-64b8-4d08-8f79-e722076b2133",
+              "label": "团队协作案例",
+              "group": "行为问题",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "c91e688e-13a4-403d-a19a-8f8fe629e37c",
+              "label": "冲突处理案例",
+              "group": "行为问题",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a037be3a-191f-4228-a565-73ac1282f299",
+      "name": "推荐人与紧急联系人",
+      "tier": "少用",
+      "templateKey": "references",
+      "entries": [
+        {
+          "id": "298ea95d-df36-4d76-bea0-7376566ea0b0",
+          "title": "推荐人与紧急联系人 1",
+          "fields": [
+            {
+              "id": "e67f10b1-f4f4-4dc2-9227-be6c5d109e6f",
+              "label": "姓名",
+              "group": "联系人信息",
+              "type": "text",
+              "value": "",
+              "sensitive": true
+            },
+            {
+              "id": "8f3258ef-ffcb-4ad5-89a4-9b0e160bc823",
+              "label": "关系",
+              "group": "联系人信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "d2c5d73d-6dc7-4e4b-9ee0-95f965885eb4",
+              "label": "所在单位",
+              "group": "联系人信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "d95d3b3e-4bec-4f53-8875-8f36400af9b8",
+              "label": "职务",
+              "group": "联系人信息",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "95f55326-3143-4e84-8023-ce6275690a18",
+              "label": "联系电话",
+              "group": "联系人信息",
+              "type": "tel",
+              "value": "",
+              "sensitive": true
+            },
+            {
+              "id": "be5c2138-2a57-41ce-af77-8b210215235a",
+              "label": "电子邮箱",
+              "group": "联系人信息",
+              "type": "email",
+              "value": "",
+              "sensitive": true
+            },
+            {
+              "id": "6890a02a-f7a0-4f19-92fe-cd1aa41e456e",
+              "label": "联系说明",
+              "group": "补充说明",
+              "type": "multiline",
+              "value": "",
+              "sensitive": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4b657aa5-e2c7-4fb5-ba8b-1dbad40f5566",
+      "name": "家庭成员",
+      "tier": "少用",
+      "templateKey": "family",
+      "entries": [
+        {
+          "id": "b30d537f-6b5f-41af-87ca-261ddef2eea8",
+          "title": "家庭成员 1",
+          "fields": [
+            {
+              "id": "d51eeba8-fbef-4447-84dd-3bc0ef6b0d8e",
+              "label": "姓名",
+              "group": "家庭成员",
+              "type": "text",
+              "value": "",
+              "sensitive": true
+            },
+            {
+              "id": "523426f0-58c8-4d85-81f5-755f7200e772",
+              "label": "与本人关系",
+              "group": "家庭成员",
+              "type": "text",
+              "value": "",
+              "sensitive": true
+            },
+            {
+              "id": "77a0f367-213a-4ba5-9966-cd1eb13f97bb",
+              "label": "工作单位",
+              "group": "家庭成员",
+              "type": "text",
+              "value": "",
+              "sensitive": true
+            },
+            {
+              "id": "20313528-6355-43e1-8310-cca70fdebd76",
+              "label": "职务",
+              "group": "家庭成员",
+              "type": "text",
+              "value": "",
+              "sensitive": true
+            },
+            {
+              "id": "ef3ecc59-f982-4e74-b51c-53cc056c9a74",
+              "label": "联系电话",
+              "group": "家庭成员",
+              "type": "tel",
+              "value": "",
+              "sensitive": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f70f6ac9-f848-4a80-a6e3-dddcb2e6385c",
+      "name": "网申补充与声明",
+      "tier": "少用",
+      "templateKey": "other",
+      "entries": [
+        {
+          "id": "ac964e1e-6d82-4e21-b3da-4db5284d4edc",
+          "title": "网申补充与声明 1",
+          "fields": [
+            {
+              "id": "cfda5cc7-e823-4c03-8e6a-a0ac6b9d5ef3",
+              "label": "其他说明",
+              "group": "补充材料",
+              "type": "multiline",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "b37994ce-0b9c-497b-bf80-75c142526e9a",
+              "label": "信息来源",
+              "group": "补充材料",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "b0177a72-d050-4189-b80f-44e4d4a934d5",
+              "label": "内推码",
+              "group": "补充材料",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "33640cdb-35c5-4d13-851d-80c961e55504",
+              "label": "是否曾在该企业任职",
+              "group": "补充材料",
+              "type": "text",
+              "value": "",
+              "sensitive": false
+            },
+            {
+              "id": "22ddeb8b-cd6e-473e-ab68-b3bfae1cf603",
+              "label": "利益冲突 / 亲属任职说明",
+              "group": "补充材料",
+              "type": "multiline",
+              "value": "",
+              "sensitive": true
+            },
+            {
+              "id": "082ed349-e386-48c3-80b8-e7d444911d7f",
+              "label": "其他需要说明的情况",
+              "group": "补充材料",
+              "type": "multiline",
+              "value": "",
+              "sensitive": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

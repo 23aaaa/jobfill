@@ -1,0 +1,15 @@
+{
+  "product": "小师弟求职",
+  "version": "1.1.0-rc.1",
+  "source_sha256": "ba1face72fbb93d1ebf462c94cbcbd065ea115f5cbcda7ba0ec7d21ce0c0a7f7",
+  "generated_at": "2026-09-23T09:01:03.698Z",
+  "node": "v22.16.0",
+  "counts": {
+    "total": 127,
+    "passed": 127,
+    "failed": 0,
+    "skipped": 0
+  },
+  "exit_code": 0,
+  "scope": "Node domain/infrastructure tests; Chrome service-worker APIs mocked. Coverage is NOT whole-product or native browser coverage."
+}

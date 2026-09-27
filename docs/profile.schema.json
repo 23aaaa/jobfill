@@ -1,0 +1,165 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "小师弟求职资料结构 v1",
+  "description": "Canonical wire representation. domain/model.js additionally enforces global ID uniqueness, UTF-16/control-character validation, aggregate entry/field limits and byte budgets; its validator is authoritative.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "id",
+    "name",
+    "revision",
+    "updatedAt",
+    "modules"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80,
+      "pattern": "^[-A-Za-z0-9_]+$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "modules": {
+      "type": "array",
+      "maxItems": 60,
+      "items": {
+        "$ref": "#/$defs/module"
+      }
+    }
+  },
+  "$defs": {
+    "field": {
+      "type": "object",
+      "required": [
+        "id",
+        "label",
+        "group",
+        "type",
+        "value",
+        "sensitive"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "^[-A-Za-z0-9_]+$"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "group": {
+          "type": "string",
+          "maxLength": 120
+        },
+        "type": {
+          "enum": [
+            "text",
+            "multiline",
+            "date",
+            "month",
+            "email",
+            "tel",
+            "url",
+            "number"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "maxLength": 32767
+        },
+        "sensitive": {
+          "type": "boolean"
+        }
+      }
+    },
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "fields"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "^[-A-Za-z0-9_]+$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "fields": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/field"
+          }
+        }
+      }
+    },
+    "module": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "tier",
+        "templateKey",
+        "entries"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80,
+          "pattern": "^[-A-Za-z0-9_]+$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "tier": {
+          "enum": [
+            "常用",
+            "扩展",
+            "少用"
+          ]
+        },
+        "templateKey": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/entry"
+          }
+        }
+      }
+    }
+  }
+}

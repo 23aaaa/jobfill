@@ -1,0 +1,63 @@
+{
+  "version": "1.1.0-rc.1",
+  "release_decision": "HOLD",
+  "instructions": "只有实际完成并附本版本可核对的脱敏证据，才能将 status 改为 passed。不可用计划或占位文字替代结果。",
+  "items": [
+    {
+      "id": "native_chrome",
+      "requirement": "Windows 当前稳定版 Chrome：原生安装、工具栏开启、侧栏拖动、真实剪贴板/下载、本地持久化与重启",
+      "status": "not_run",
+      "reviewer": "",
+      "reviewed_at": "",
+      "evidence_path": ""
+    },
+    {
+      "id": "native_focus_security",
+      "requirement": "跨标签、跨窗口、导航、service worker 休眠/重启、activeTab 重新授权、页面来源/权限边界、三方脚本不能读取资料库",
+      "status": "not_run",
+      "reviewer": "",
+      "reviewed_at": "",
+      "evidence_path": ""
+    },
+    {
+      "id": "real_sites",
+      "requirement": "至少完成字节、阿里、美团实际登录网申草稿路径的文本/多段经历/保存后回读验收；不自动提交",
+      "status": "not_run",
+      "reviewer": "",
+      "reviewed_at": "",
+      "evidence_path": ""
+    },
+    {
+      "id": "excel_editors",
+      "requirement": "Microsoft Excel 与 WPS 实际打开、编辑、保存、导回：日期文本、前导零、长证件号、特殊符号、多行内容及自定义模块",
+      "status": "not_run",
+      "reviewer": "",
+      "reviewed_at": "",
+      "evidence_path": ""
+    },
+    {
+      "id": "usability",
+      "requirement": "真人端到端可用性测试：首次安装、建档、Excel 往返、复制兜底、错误恢复及明确支持边界",
+      "status": "not_run",
+      "reviewer": "",
+      "reviewed_at": "",
+      "evidence_path": ""
+    },
+    {
+      "id": "commercial",
+      "requirement": "运营主体、真实付费交付与退款/客服流程、购买者许可及公示信息完成",
+      "status": "not_run",
+      "reviewer": "",
+      "reviewed_at": "",
+      "evidence_path": ""
+    },
+    {
+      "id": "store_review",
+      "requirement": "商店素材、准确权限说明、公开隐私政策、发布渠道要求及审核状态人工确认",
+      "status": "not_run",
+      "reviewer": "",
+      "reviewed_at": "",
+      "evidence_path": ""
+    }
+  ]
+}

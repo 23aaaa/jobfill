@@ -1,0 +1,4 @@
+import fs from 'node:fs/promises';import path from 'node:path';import {createHash} from 'node:crypto';import {fileURLToPath} from 'node:url';
+export const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+export async function fingerprint(){const files=[];async function walk(dir){for(const e of await fs.readdir(dir,{withFileTypes:true})){const full=path.join(dir,e.name);if(e.isDirectory())await walk(full);else files.push(full);}}await walk(path.join(root,'extension'));const hash=createHash('sha256');for(const file of files.sort()){hash.update(path.relative(root,file).replaceAll('\\','/')+'\0');hash.update(await fs.readFile(file));hash.update('\0');}return hash.digest('hex');}
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url))console.log(await fingerprint());
