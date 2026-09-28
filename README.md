@@ -1,5 +1,7 @@
 # 小师弟求职（JobFill）
 
+[下载当前版本](https://github.com/23aaaa/jobfill/releases/tag/v1.1.0-rc.1) · [使用说明](docs/user-guide.md) · [常见问题](#常见问题) · [English](README.en.md)
+
 > 整理一份资料，在招聘网页按项填写。
 
 **本地求职资料管理与 Chrome 侧栏填写工具。** 在资料维护页中整理个人信息、教育和工作经历，打开招聘网页后，选中输入框，再点击侧栏中对应的内容即可填写。长段描述也可以直接复制。
@@ -8,7 +10,7 @@
 
 当前版本：**1.1.0-rc.1**。安装包和资料文件已包含在仓库中，使用时无需安装 Node.js。
 
-**如果这个工具对你有帮助，欢迎点一下右上角的 Star，让更多求职同学看到。**
+如果这个工具对你有帮助，欢迎 Star 收藏。使用中遇到问题，可以在 [Issues](https://github.com/23aaaa/jobfill/issues) 反馈。
 
 ## 为什么需要这个工具？
 
@@ -36,7 +38,7 @@
 
 ### 方式一：安装插件
 
-1. 下载 [插件安装包](release/xiaoshidi-extension-1.1.0-rc.1.zip?raw=true)，解压到一个固定文件夹。
+1. 在 [下载页](https://github.com/23aaaa/jobfill/releases/tag/v1.1.0-rc.1) 的 Assets 中下载 `xiaoshidi-extension-1.1.0-rc.1.zip`，解压到一个固定文件夹。
 2. 使用 Chrome 116 或更新版本，打开 `chrome://extensions/`。
 3. 开启右上角的「开发者模式」，点击「加载已解压的扩展程序」。
 4. 选择解压后包含 `manifest.json` 的文件夹。
@@ -48,8 +50,8 @@
 
 | 下载 | 使用方式 |
 |------|----------|
-| [独立 HTML 资料维护页](release/小师弟求职-资料维护.html?raw=true) | 将文件下载并保存到本机，用浏览器打开即可编辑，无需安装开发工具 |
-| [Excel 资料模板](release/小师弟求职-资料模板.xlsx?raw=true) | 按工作表分类填写，在「填写内容」列录入自己的资料，保存为 `.xlsx` 后导入 |
+| [独立 HTML 资料维护页](https://github.com/23aaaa/jobfill/releases/tag/v1.1.0-rc.1) | 在下载页选择 `xiaoshidi-profile-manager.html`，保存到本机后用浏览器打开即可编辑 |
+| [Excel 资料模板](https://github.com/23aaaa/jobfill/releases/tag/v1.1.0-rc.1) | 在下载页选择 `xiaoshidi-profile-template.xlsx`，在「填写内容」列录入资料，保存后导入 |
 
 独立 HTML 专门用于资料维护，网页填写由插件完成。HTML 页面与插件不自动同步，需要通过导出、导入交换资料。导入时先核对预览，确认替换前备份已有内容。
 
@@ -222,7 +224,7 @@ jobfill/
 
 ## 参与贡献
 
-欢迎提交 Issue 和 Pull Request。反馈填写问题时，请提供浏览器版本、网站地址、操作步骤和脱敏截图，不要上传真实简历资料。
+欢迎提交 Issue 和 Pull Request。反馈填写问题时，请提供浏览器版本、不带私人参数的网站地址、操作步骤和脱敏截图，不要上传真实简历资料。使用问题可在 [Discussions](https://github.com/23aaaa/jobfill/discussions) 提问，参与修改前请查看 [贡献说明](CONTRIBUTING.md)。
 
 1. Fork 本仓库并创建工作分支。
 2. 完成修改后运行相关检查与测试。

@@ -1,0 +1,37 @@
+name: 使用问题 / Bug report
+description: 报告填写、导入、保存或显示异常
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "请先查看 README 的常见问题。不要上传真实简历、备份、证件号码或登录信息。"
+  - type: input
+    id: version
+    attributes:
+      label: 产品版本与浏览器 / Version and browser
+      placeholder: "例如 1.1.0-rc.1，Chrome 版本号，Windows 11"
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: 发生问题的位置 / Affected page
+      description: "资料维护页、独立 HTML 或网页域名即可。请去掉地址中的私人参数。"
+  - type: textarea
+    id: steps
+    attributes:
+      label: 如何复现 / Steps to reproduce
+      description: "从打开页面开始，说明依次做了哪些操作。"
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 预期与实际结果 / Expected and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 补充信息 / Additional context
+      description: "可附脱敏截图或错误信息。请检查其中没有个人资料。"

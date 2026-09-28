@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 使用说明 / User guide
+    url: https://github.com/23aaaa/jobfill/blob/main/README.md
+    about: 安装步骤、使用方法与常见问题
+  - name: 使用讨论 / Questions
+    url: https://github.com/23aaaa/jobfill/discussions
+    about: 提问或分享使用方法，请勿附上私人资料

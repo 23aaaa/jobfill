@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小师弟求职 JobFill · 本地求职资料管理与 Chrome 侧栏填写</title>
+  <meta name="description" content="在本机整理个人信息、教育和工作经历，通过 Chrome 侧栏逐项填写网申表单。提供独立 HTML 资料维护页、Excel 模板与本地备份。">
+  <link rel="canonical" href="https://23aaaa.github.io/jobfill/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="小师弟求职 JobFill">
+  <meta property="og:description" content="把求职资料整理好，填表时随手取用。Chrome 侧栏填写，HTML 与 Excel 整理，本机保存。">
+  <meta property="og:url" content="https://23aaaa.github.io/jobfill/">
+  <meta property="og:image" content="https://23aaaa.github.io/jobfill/assets/share-card.png">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#f8fafc">
+  <style>
+    :root{color-scheme:light;--ink:#17243b;--muted:#526179;--blue:#2458bd;--line:#dce3ed;--paper:#f8fafc}
+    *{box-sizing:border-box}html{scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.8 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+    a{color:var(--blue);text-underline-offset:4px}a:hover{text-decoration-thickness:2px}a:focus-visible,summary:focus-visible{outline:3px solid #75a8ff;outline-offset:5px}
+    .wrap{width:min(1080px,calc(100% - 48px));margin:auto}.skip{position:absolute;left:24px;top:-100px;background:white;padding:10px}.skip:focus{top:12px;z-index:1}
+    header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px 0;border-bottom:1px solid var(--line)}.brand{font-weight:700;color:var(--ink);text-decoration:none}.brand span{font-weight:400;color:var(--muted);margin-left:8px}
+    nav{display:flex;gap:24px;flex-wrap:wrap}nav a{font-size:14px;text-decoration:none}main{padding-bottom:72px}.hero{padding:72px 0 48px;max-width:830px}.eyebrow{font-size:13px;letter-spacing:.1em;color:var(--blue);margin:0 0 18px}h1{font-size:clamp(32px,5vw,52px);line-height:1.35;letter-spacing:-.03em;margin:0 0 24px;font-weight:650}
+    .lead{font-size:18px;color:var(--muted);max-width:690px;margin:0 0 28px}.actions{display:flex;gap:12px;flex-wrap:wrap}.button{display:inline-block;border:1px solid var(--line);border-radius:8px;padding:10px 20px;text-decoration:none;background:white;font-weight:600}.primary{background:var(--blue);color:white;border-color:var(--blue)}.note{font-size:13px;color:var(--muted);margin-top:16px}
+    figure{margin:0}figure img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:10px;background:white}figcaption{font-size:13px;color:var(--muted);margin-top:10px}
+    section{padding-top:56px}h2{font-size:26px;line-height:1.4;margin:0 0 24px}h3{font-size:17px;margin:0 0 8px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}.grid p{margin:0;color:var(--muted)}.step{color:var(--blue);font-size:13px;margin-bottom:12px;display:block}
+    .downloads{border:1px solid var(--line);border-radius:10px;background:white;padding:0 24px}.download{display:grid;grid-template-columns:1fr auto;align-items:center;gap:16px;padding:22px 0}.download+.download{border-top:1px solid var(--line)}.download p{margin:0;color:var(--muted);font-size:14px}.download a{white-space:nowrap}
+    details{border-top:1px solid var(--line);padding:18px 0}summary{cursor:pointer;font-weight:600}details p{max-width:800px;color:var(--muted);margin-bottom:0}code{font-size:.9em;overflow-wrap:anywhere}.english{border-top:1px solid var(--line);margin-top:56px;padding-top:32px}.english p{max-width:800px;color:var(--muted)}footer{border-top:1px solid var(--line);padding:24px 0 32px;font-size:13px;color:var(--muted)}footer a{margin-right:18px}
+    @media(max-width:640px){.wrap{width:calc(100% - 32px)}header{align-items:flex-start;padding:20px 0;gap:16px}.brand span{display:block;margin-left:0;font-size:12px}nav{gap:14px}.hero{padding:44px 0 32px}.lead{font-size:16px}.grid{grid-template-columns:1fr;gap:24px}section{padding-top:40px}.download{grid-template-columns:1fr;gap:8px}.downloads{padding:0 18px}.button{padding:10px 16px}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="./">小师弟求职 <span>JobFill</span></a>
+      <nav aria-label="导航"><a href="#download">下载</a><a href="https://github.com/23aaaa/jobfill/blob/main/README.md">使用说明</a><a href="https://github.com/23aaaa/jobfill">GitHub</a></nav>
+    </header>
+    <main id="main">
+      <div class="hero">
+        <p class="eyebrow">本地资料管理 · CHROME 侧栏填写</p>
+        <h1>把求职资料整理好，<br>填表时随手取用。</h1>
+        <p class="lead">姓名、学校、实习经历和项目描述，集中放在一处。打开招聘网页，选中输入框，再点击侧栏里的对应内容，少一些来回查找和复制。</p>
+        <div class="actions"><a class="button primary" href="#download">下载 1.1.0-rc.1</a><a class="button" href="https://github.com/23aaaa/jobfill/blob/main/README.md#快速开始">查看安装步骤</a></div>
+        <p class="note">当前为安装候选版本，使用 Chrome 116+ 开发者模式安装。<a href="#english" lang="en">English guide</a></p>
+      </div>
+      <figure>
+        <img src="assets/profile-manager.png" width="1440" height="900" alt="资料维护页按分类整理工作经历，右侧可编辑职位、日期和经历描述" fetchpriority="high">
+        <figcaption>资料维护页示意，图中使用虚构资料。</figcaption>
+      </figure>
+      <section aria-labelledby="how">
+        <h2 id="how">从整理到填写</h2>
+        <div class="grid">
+          <div><span class="step">01 / 整理</span><h3>按自己的习惯维护资料</h3><p>直接在界面中编辑分类、经历和字段，也可以使用独立 HTML 页面或 Excel 模板。</p></div>
+          <div><span class="step">02 / 取用</span><h3>侧栏查找，逐项填写</h3><p>选中网页输入框后点击对应资料。长段描述可以展开查看，遇到复杂控件时可手动复制粘贴。</p></div>
+          <div><span class="step">03 / 保存</span><h3>资料留在当前浏览器</h3><p>编辑后自动保存，支持导出备份。换设备前先导出，需要口令保护时可使用加密备份。</p></div>
+        </div>
+      </section>
+      <section id="download" aria-labelledby="download-title">
+        <h2 id="download-title">选择需要的文件</h2>
+        <div class="downloads">
+          <div class="download"><div><h3>Chrome 插件</h3><p>解压后，在扩展管理页选择「加载已解压的扩展程序」。</p></div><a href="https://github.com/23aaaa/jobfill/releases/download/v1.1.0-rc.1/xiaoshidi-extension-1.1.0-rc.1.zip">下载 ZIP</a></div>
+          <div class="download"><div><h3>独立 HTML 资料维护页</h3><p>保存到本机，用浏览器打开即可编辑。通过导入导出与插件交换资料。</p></div><a href="https://github.com/23aaaa/jobfill/releases/download/v1.1.0-rc.1/xiaoshidi-profile-manager.html">下载 HTML</a></div>
+          <div class="download"><div><h3>Excel 资料模板</h3><p>20 个分类、230 个字段。在「填写内容」列录入资料，保存后导入。</p></div><a href="https://github.com/23aaaa/jobfill/releases/download/v1.1.0-rc.1/xiaoshidi-profile-template.xlsx">下载 XLSX</a></div>
+        </div>
+        <p class="note">全部文件与 SHA-256 校验值见 <a href="https://github.com/23aaaa/jobfill/releases/tag/v1.1.0-rc.1">GitHub 下载页</a>。使用这些文件无需安装 Node.js。</p>
+      </section>
+      <section aria-labelledby="faq">
+        <h2 id="faq">使用前可以了解这些</h2>
+        <details><summary>会自动填写整张表单或提交申请吗？</summary><p>每次填写一个选中的字段，由你检查并提交。复杂下拉框、日期选择器和附件仍按网站流程操作。不同招聘网站的控件需要分别验证。</p></details>
+        <details><summary>HTML 页面与插件会同步资料吗？</summary><p>两者通过导入导出交换资料，不自动同步。导入会替换当前资料，请先备份并核对预览。</p></details>
+        <details><summary>资料存在哪里？</summary><p>产品将资料保存在当前浏览器，不调用网络服务。你主动填写的内容会交给目标网站，复制会写入系统剪贴板。本地资料、Excel 和 JSON 未加密，<code>.applyvault</code> 备份可设置口令加密。</p></details>
+        <details><summary>遇到问题在哪里反馈？</summary><p>先查看 <a href="https://github.com/23aaaa/jobfill/blob/main/README.md#常见问题">常见问题</a>。操作疑问可在 <a href="https://github.com/23aaaa/jobfill/discussions">Discussions</a> 提问，异常可提交 <a href="https://github.com/23aaaa/jobfill/issues/new/choose">Issue</a>，请去掉截图和地址中的个人信息。</p></details>
+      </section>
+      <section class="english" id="english" lang="en" aria-labelledby="english-title">
+        <h2 id="english-title">JobFill, a local job application profile manager</h2>
+        <p>Keep your education, work experience and project descriptions together. Select a webpage field, then click a saved value in the Chrome side panel. A standalone HTML manager and an Excel template are included. The app interface is in Chinese.</p>
+        <a href="https://github.com/23aaaa/jobfill/blob/main/README.en.md">Read the English installation guide</a>
+      </section>
+    </main>
+    <footer><a href="https://github.com/23aaaa/jobfill">源代码</a><a href="https://github.com/23aaaa/jobfill/blob/main/LICENSE">许可说明</a><a href="https://github.com/23aaaa/jobfill/blob/main/docs/security.md">资料与隐私</a><span>由 23aaaa 维护</span></footer>
+  </div>
+</body>
+</html>

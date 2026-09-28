@@ -1,0 +1,4 @@
+# Built packages and test artifacts are retained for installation and review.
+dist/** linguist-generated=true
+release/** linguist-generated=true
+reports/** linguist-generated=true
