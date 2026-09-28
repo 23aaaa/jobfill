@@ -1,6 +1,6 @@
 # 小师弟求职（JobFill）
 
-[下载当前版本](https://github.com/23aaaa/jobfill/releases/tag/v1.1.0-rc.1) · [使用说明](docs/user-guide.md) · [常见问题](#常见问题) · [English](README.en.md)
+[产品介绍](https://23aaaa.github.io/jobfill/) · [下载当前版本](https://github.com/23aaaa/jobfill/releases/tag/v1.1.0-rc.1) · [使用说明](docs/user-guide.md) · [常见问题](#常见问题) · [English](README.en.md)
 
 > 整理一份资料，在招聘网页按项填写。
 
