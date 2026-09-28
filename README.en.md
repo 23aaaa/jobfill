@@ -20,7 +20,7 @@ The screenshot uses fictional example information.
 
 ## Install the extension
 
-1. Open the [release page](https://github.com/23aaaa/jobfill/releases/tag/v1.1.0-rc.1) and download `xiaoshidi-extension-1.1.0-rc.1.zip` from **Assets**.
+1. Download the [extension ZIP](https://github.com/23aaaa/jobfill/releases/download/v1.1.0-rc.1/xiaoshidi-extension-1.1.0-rc.1.zip). Notes and checksums are on the [release page](https://github.com/23aaaa/jobfill/releases/tag/v1.1.0-rc.1).
 2. Extract it into a folder you will keep on your computer.
 3. Open `chrome://extensions/` in Chrome 116 or newer and turn on **Developer mode**.
 4. Choose **Load unpacked**, then select the extracted folder containing `manifest.json`.
@@ -28,7 +28,7 @@ The screenshot uses fictional example information.
 
 If you download the entire repository instead, load the `dist/extension` folder.
 
-The release also includes `xiaoshidi-profile-manager.html` and `xiaoshidi-profile-template.xlsx`. Save the HTML file locally and open it in your browser. The Excel template contains 20 categories and 230 fields. Import and export exchange data between these files and the extension; they do not sync automatically.
+You can also download the [HTML profile manager](https://github.com/23aaaa/jobfill/releases/download/v1.1.0-rc.1/xiaoshidi-profile-manager.html) and [Excel template](https://github.com/23aaaa/jobfill/releases/download/v1.1.0-rc.1/xiaoshidi-profile-template.xlsx). Save the HTML file locally and open it in your browser. The Excel template contains 20 categories and 230 fields. Import and export exchange data between these files and the extension; they do not sync automatically.
 
 ## Fill a field
 

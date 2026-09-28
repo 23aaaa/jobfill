@@ -6,11 +6,15 @@
 
 **本地求职资料管理与 Chrome 侧栏填写工具。** 在资料维护页中整理个人信息、教育和工作经历，打开招聘网页后，选中输入框，再点击侧栏中对应的内容即可填写。长段描述也可以直接复制。
 
+适合校招、秋招、实习和日常求职中需要反复填写相同资料的场景。
+
 除了插件内的资料页，还提供可独立打开的 **HTML 资料维护页** 和 **Excel 模板**。可以按自己的习惯整理资料，再通过导入导出交给插件使用。
 
 当前版本：**1.1.0-rc.1**。安装包和资料文件已包含在仓库中，使用时无需安装 Node.js。
 
 如果这个工具对你有帮助，欢迎 Star 收藏。使用中遇到问题，可以在 [Issues](https://github.com/23aaaa/jobfill/issues) 反馈。
+
+![资料维护页中的工作经历，使用虚构演示资料](reports/refined-manager-work.png)
 
 ## 为什么需要这个工具？
 
@@ -38,7 +42,7 @@
 
 ### 方式一：安装插件
 
-1. 在 [下载页](https://github.com/23aaaa/jobfill/releases/tag/v1.1.0-rc.1) 的 Assets 中下载 `xiaoshidi-extension-1.1.0-rc.1.zip`，解压到一个固定文件夹。
+1. 下载 [插件安装包](https://github.com/23aaaa/jobfill/releases/download/v1.1.0-rc.1/xiaoshidi-extension-1.1.0-rc.1.zip)，解压到一个固定文件夹。版本说明与校验值见 [下载页](https://github.com/23aaaa/jobfill/releases/tag/v1.1.0-rc.1)。
 2. 使用 Chrome 116 或更新版本，打开 `chrome://extensions/`。
 3. 开启右上角的「开发者模式」，点击「加载已解压的扩展程序」。
 4. 选择解压后包含 `manifest.json` 的文件夹。
@@ -50,8 +54,8 @@
 
 | 下载 | 使用方式 |
 |------|----------|
-| [独立 HTML 资料维护页](https://github.com/23aaaa/jobfill/releases/tag/v1.1.0-rc.1) | 在下载页选择 `xiaoshidi-profile-manager.html`，保存到本机后用浏览器打开即可编辑 |
-| [Excel 资料模板](https://github.com/23aaaa/jobfill/releases/tag/v1.1.0-rc.1) | 在下载页选择 `xiaoshidi-profile-template.xlsx`，在「填写内容」列录入资料，保存后导入 |
+| [独立 HTML 资料维护页](https://github.com/23aaaa/jobfill/releases/download/v1.1.0-rc.1/xiaoshidi-profile-manager.html) | 保存 `xiaoshidi-profile-manager.html` 到本机后，用浏览器打开即可编辑 |
+| [Excel 资料模板](https://github.com/23aaaa/jobfill/releases/download/v1.1.0-rc.1/xiaoshidi-profile-template.xlsx) | 在 `xiaoshidi-profile-template.xlsx` 的「填写内容」列录入资料，保存后导入 |
 
 独立 HTML 专门用于资料维护，网页填写由插件完成。HTML 页面与插件不自动同步，需要通过导出、导入交换资料。导入时先核对预览，确认替换前备份已有内容。
 
@@ -97,10 +101,6 @@
 更多操作见 [使用说明](docs/user-guide.md) 和 [Excel 格式说明](docs/excel-format.md)。
 
 ## 界面预览
-
-资料维护页：
-
-![资料维护页中的工作经历](reports/refined-manager-work.png)
 
 侧栏中的多段经历：
 
